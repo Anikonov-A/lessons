@@ -1,0 +1,100 @@
+@import url("reset.css");
+* {
+  color: #545353;
+}
+li {
+  color: #3914dc;
+}
+.header-title {
+  color: #000000;
+}
+.header-list .list-item a {
+  color: #ffa500;
+}
+.history-list > .h-list-item ~ li a {
+  color: #483d8b;
+}
+.page-link {
+  color: #ee82ee;
+}
+#about-band > p {
+  color: #008080;
+}
+#about-band > p > .link {
+  color: #b22222;
+}
+.sub-title {
+  color: #9acd32;
+}
+.sub-title ~ p {
+  color: #6a9b20;
+}
+body main h3 {
+  color: #121212;
+}
+.about-albums .about-albums-title {
+  color: #ff69b4;
+}
+
+#first-albums > a ~ p {
+  color: darkblue;
+}
+#first-albums > p > span {
+  color: red;
+}
+
+#master-of-puppets > p {
+  color: #ee82ee;
+}
+#master-of-puppets > a + p {
+  color: #dc143c;
+}
+#and-justice-for-all h4.about-albums-title {
+  color: #90ee90;
+}
+#and-justice-for-all .about-albums-title ~ p {
+  color: lightblue;
+}
+#metallica .about-albums-title {
+  color: #000000;
+}
+#metallica a ~ p {
+  color: #000000;
+}
+div.about-albums > h4.about-albums-title {
+  color: #ff4500;
+}
+#load-and-more > a + p {
+  color: #8b0000;
+}
+#load-and-more > p + p {
+  color: #f08080;
+}
+[id="napster"] > h4 {
+  color: #015b5b;
+}
+[id="napster"] > h4 + p {
+  color: #20b2aa;
+}
+.about-albums#st-anger > a ~ p {
+  color: #fa5509;
+}
+#magnetic-and-more > .about-albums-title {
+  color: #545353;
+}
+div.about-albums#magnetic-and-more > p {
+  color: lightsteelblue;
+}
+#hardwired > .about-albums-title,
+p {
+  color: #b9b906;
+}
+/* Також я пам'ятаю про використання коми при виборі декількох селекторів
+можна було зробити наприклад так:
+.page-link,
+.spotify-link,
+.link {
+  color: blue;
+  }
+Сподіваюсь нічого не забув)
+  */

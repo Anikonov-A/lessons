@@ -1,0 +1,105 @@
+/* Inter //400,500 used */
+/* @import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap"); */
+/* Poppins //300,400,600,700 used */
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:300,regular,600,700&display=swap"); */
+/* Yellowtail //used */
+/* @import url("https://fonts.googleapis.com/css?family=Yellowtail::regular&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@300;400;600;700&family=Yellowtail&display=swap");
+/*used I-400,500;P-600,400,300,700 */
+
+/* Caviar  */
+/* used */
+@font-face {
+  font-family: "Caviar";
+  src: url("../fonts/caviar/caviar_dreams_bold-webfont.woff2") format("woff2"),
+    url("../fonts/caviar/caviar_dreams_bold-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Caviar";
+  src: url("../fonts/caviar/caviardreams-webfont.woff2") format("woff2"),
+    url("../fonts/caviar/caviardreams-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Monorita */
+
+/* used */
+@font-face {
+  font-family: "Monorita";
+  src: url("../fonts/monorita/hfmonorita-regular-webfont.woff2") format("woff2"),
+    url("../fonts/monorita/hfmonorita-regular-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Monorita";
+  src: url("../fonts/monorita/hfmonorita-medium-webfont.woff2") format("woff2"),
+    url("../fonts/monorita/hfmonorita-medium-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Monorita";
+  src: url("../fonts/monorita/hfmonorita-black-webfont.woff2") format("woff2"),
+    url("../fonts/monorita/hfmonorita-black-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+/* Source sans pro */
+/* used */
+@font-face {
+  font-family: "Source-sans-pro";
+  src: url("../fonts/source-sans/sourcesanspro-light-webfont.woff2") format("woff2"),
+    url("../fonts/source-sans/sourcesanspro-light-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Source-sans-pro";
+  src: url("../fonts/source-sans/sourcesanspro-regular-webfont.woff2") format("woff2"),
+    url("../fonts/source-sans/sourcesanspro-regular-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Source-sans-pro";
+  src: url("../fonts/source-sans/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/source-sans/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Source-sans-pro";
+  src: url("../fonts/source-sans/sourcesanspro-bold-webfont.woff2") format("woff2"),
+    url("../fonts/source-sans/sourcesanspro-bold-webfont.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+/* used */
+@font-face {
+  font-family: "Souvenir";
+  src: url("../fonts/souvenir/souvenircitalic-webfont.woff2") format("woff2"),
+    url("../fonts/souvenir/souvenircitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

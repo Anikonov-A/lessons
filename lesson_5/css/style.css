@@ -1,0 +1,176 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #7d7d7d;
+  line-height: 1.46;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: "Yellowtail", cursive;
+  text-align: center;
+  color: #efd372;
+  font-size: 32px;
+  text-decoration: underline;
+}
+.titles {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.27;
+  font-weight: 600;
+  color: #37393f;
+}
+.white-c-title {
+  font-size: 30px;
+}
+.white-c-sub-title {
+  color: #6b77e5;
+  font-size: 20px;
+}
+.project-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.project-info ul,
+ol > li {
+  font-weight: 500;
+}
+
+/* My article  */
+
+.my-article .article-title {
+  font-family: "Monorita", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  color: #2b1313;
+  text-transform: uppercase;
+}
+
+.about-group > p {
+  text-indent: 30px;
+  font-family: "Monorita", sans-serif;
+  font-weight: 400;
+}
+.about-group span {
+  color: darkblue;
+  font-weight: 900;
+  font-size: 24px;
+  font-style: oblique;
+}
+.list-content .page-link {
+  font-family: "Souvenir", sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #6b77e5;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+.inner-list .page-link {
+  color: #321616;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.biography-title {
+  text-align: center;
+  font-family: "Monorita", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  color: #2b1313;
+  text-shadow: 1px 1px 2px #2b1313, -1px -1px 2px #2b1313;
+}
+.text-title {
+  font-family: "Caviar", sans-serif;
+  font-weight: 700;
+  color: #2f4f4f;
+  font-size: 26px;
+  line-height: 1.47;
+  text-transform: capitalize;
+}
+#early-years > h4 + p {
+  font-family: "Source-sans-pro", sans-serif;
+  font-weight: 300;
+  word-spacing: 5px;
+  color: #008b8b;
+  text-indent: 25px;
+}
+#early-years > p + p {
+  font-family: "Source-sans-pro", sans-serif;
+  font-weight: 600;
+  color: #c9db41;
+  text-shadow: 1px 2px 2px #c12dc1;
+  text-indent: 25px;
+  text-align: center;
+}
+#growth-popularity h4 {
+  text-decoration: line-through;
+  word-spacing: 25px;
+}
+#growth-popularity > .text-title + p {
+  font-family: "Source-sans-pro", sans-serif;
+  font-weight: 400;
+  text-indent: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffc0cb;
+  text-shadow: 1px 2px 2px #d87093, 0 0 16px #0000ff, 0 0 4px #0000ff;
+}
+#growth-popularity > p + p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-transform: lowercase;
+  text-align: justify;
+  text-indent: 15px;
+  text-shadow: -1px -3px 7px #2f4f4f, 0px 0px 2px #008b8b, 0 0 5px #20b2aa;
+}
+[id="the-crusade"] > p {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: overline;
+  text-shadow: 1px 3px 5px #006060;
+}
+[id="the-crusade"] p + p {
+  font-family: "Caviar", sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: right;
+}
+[id="discography"] {
+  font-family: "Source-sans-pro";
+  font-weight: 700;
+  font-size: 32px;
+  color: #6a5acd;
+  text-align: center;
+}
+.discography-list li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #ffd700;
+}
+.discography-list .spotify-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #238683;
+  text-shadow: 0 0 4px #00c6a0, 0 0 8px #00c6a0, 0 0 12px #00c6a0,
+    0 0 16px #00c6a0, 0 0 20px #00c6a0;
+}
+#mini-albums .outer-link {
+  color: #0000ff;
+  text-decoration: underline;
+}
+#offical-site {
+  font-family: "Yellowtail", cursive;
+  font-size: 26px;
+  color: #006060;
+  letter-spacing: 1px;
+}
+
+.back {
+  text-align: center;
+  color: #0000ff;
+  text-decoration: underline;
+}

@@ -1,0 +1,261 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.46;
+  color: #7d7d7d;
+}
+.photo {
+  max-width: 100%;
+}
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.27;
+  color: #37393f;
+}
+.head-title {
+  text-align: center;
+  font-family: "Yellowtail", cursive;
+  color: #a319a3;
+  font-size: 28px;
+  text-decoration: underline;
+}
+.list {
+  text-align: center;
+}
+.list a {
+  font-family: "Yellowtail", cursive;
+  font-size: 24px;
+  color: #0000ff;
+  text-decoration: underline;
+}
+/* Consulting */
+.consulting-wrapper {
+  max-width: 715px;
+  margin: auto;
+}
+.team-photo {
+  margin-bottom: 41px;
+}
+.sub-title {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.sub-title + p {
+  margin-bottom: 42px;
+}
+.sub-sub-title {
+  color: #6b77e5;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.sub-sub-title + p {
+  margin-bottom: 40px;
+}
+.laptop-photo {
+  margin-right: 29px;
+}
+.bottom-part {
+  font-size: 0;
+}
+.consulting-benefits {
+  display: inline-block;
+}
+.consulting-benefits h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.consulting-benefits h3 {
+  color: #40ddb6;
+  margin-bottom: 23px;
+}
+.benefits-list li {
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+/* Pretty stones */
+.p-stones-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  font-size: 0;
+}
+.p-stones-info-block {
+  display: inline-block;
+  max-width: 563px;
+  padding: 21px 0;
+  margin: 0 38px 0 0;
+}
+.img-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+.first-img {
+  margin-right: 22px;
+}
+.p-stones-info-block span {
+  color: #d06b00;
+  font-size: 28px;
+  margin-bottom: 13px;
+  display: inline-block;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.p-stones-sub-title {
+  color: #0e333d;
+  font-family: DM Serif Text;
+  font-size: 59px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+.p-stones-info-block p {
+  color: #474747;
+  font-size: 20px;
+  line-height: 1.8;
+}
+/* .p-stones-wrapper div + img {
+  margin-right: 22px;
+} */
+
+/* My practise */
+
+.my-practise .logo {
+  margin: 0 auto 20px;
+  display: block;
+}
+.info-blocks-wrapper > div {
+  display: inline-block;
+  max-width: 1440px;
+  padding: 0 15px 0;
+}
+
+.info-block > div {
+  margin: 0 0 5px 0;
+  /* OR */
+  /*  margin-bottom: 5px; */
+}
+.about-band > p {
+  font-size: 20px;
+}
+.photo {
+  vertical-align: top;
+  max-width: 100%;
+}
+.info-block-first {
+  padding: 0 0 0 50px;
+  /* OR */
+  /* padding-left: 50px; */
+}
+.info-block-first p {
+  text-shadow: 0 0 1px #ff0000, 0 0 2px #ff0000;
+  text-decoration: underline;
+}
+.info-block-second {
+  padding: 5px 0 0 50px;
+  /* OR */
+  /* padding-top:25px */
+  /* padding-left: 50px; */
+}
+.info-block-second p {
+  font-family: "Poppins", sans-serif;
+  text-align: right;
+  text-shadow: 1px 1px 3px #e6e613, -2px -2px 6px #e6e613;
+  text-decoration: overline;
+}
+.info-block-third {
+  padding: 10px 50px;
+  /* OR */
+  /* padding-top:10px;
+     padding-bottom :10px;
+     padding-left:50px;
+     padding-right :50px; */
+}
+.info-block-third p {
+  text-align: justify;
+  text-shadow: 3px 3px 3px #a319a3, 0 0 6px #a319a3;
+  text-decoration: line-through;
+}
+div.info-block-fourth {
+  padding: 7px;
+  margin-left: 43px;
+}
+.info-block-fourth p {
+  text-align: center;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff;
+  word-spacing: 1px;
+}
+.info-block [class*="info-block-fifth"] {
+  margin: 0 0 0 50px;
+  padding: 15px 0 40px;
+  min-width: 700px;
+  overflow-x: scroll;
+}
+.info-block .info-block-fifth p {
+  text-align: right;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #808080, 2px 2px 2px #808080;
+}
+
+/* bottom part */
+
+.second-wrapper img {
+  margin: 0 50px;
+}
+.info-blocks-wrapper .second-block > div {
+  /* max-width: 1000px; */
+  /* width:200px */
+  max-width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+.second-block div.s-i-block-first {
+  margin: 0 0 0 -50px;
+  /* OR */
+  /* margin-left: -50px; */
+  /* height: 300px; */
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.s-i-block-first p {
+  color: #a319a3;
+  text-transform: capitalize;
+}
+.second-block .s-i-block-second {
+  min-height: 150px;
+  overflow: hidden;
+  padding: 12px;
+}
+.s-i-block-second p {
+  color: #0000ff;
+}
+.second-block div.s-i-block-third {
+  display: none;
+}
+.second-block div.s-i-block-fourth {
+  box-sizing: content-box;
+  margin: -10px 10px 25px 15px;
+  overflow: auto;
+  vertical-align: bottom;
+}
+div.s-i-block-fourth p {
+  color: #a319a3;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #ee82ee, 0 0 2px #ee82ee;
+}
+.second-block div.s-i-block-fifth {
+  vertical-align: middle;
+  max-height: 300px;
+  overflow: clip;
+}
+footer {
+  text-align: center;
+}
+.page-link {
+  font-size: 36px;
+  color: #0000ff;
+  text-decoration: underline;
+  font-style: oblique;
+}

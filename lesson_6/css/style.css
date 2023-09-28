@@ -36,7 +36,7 @@ body {
 /* Consulting */
 .consulting-wrapper {
   max-width: 692px;
-  margin: auto;
+  margin: 0 auto 30px;
 }
 .team-photo {
   margin-bottom: 41px;
@@ -56,15 +56,17 @@ body {
 .sub-sub-title + .text-block {
   margin-bottom: 40px;
 }
-.laptop-photo {
-  margin-right: 29px;
-}
+
 .consulting-bottom-part {
   font-size: 0;
-  margin-bottom: 30px;
+}
+.laptop-photo {
+  margin-right: 29px;
+  width: 331px;
 }
 .consulting-benefits {
   display: inline-block;
+  width: 332px;
 }
 .consulting-benefits h2 {
   font-size: 25px;

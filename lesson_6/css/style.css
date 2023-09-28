@@ -35,7 +35,7 @@ body {
 }
 /* Consulting */
 .consulting-wrapper {
-  max-width: 715px;
+  max-width: 692px;
   margin: auto;
 }
 .team-photo {
@@ -45,7 +45,7 @@ body {
   margin-bottom: 10px;
   text-transform: capitalize;
 }
-.sub-title + p {
+.sub-title + .text-block {
   margin-bottom: 42px;
 }
 .sub-sub-title {
@@ -53,14 +53,15 @@ body {
   margin-bottom: 12px;
   font-size: 20px;
 }
-.sub-sub-title + p {
+.sub-sub-title + .text-block {
   margin-bottom: 40px;
 }
 .laptop-photo {
   margin-right: 29px;
 }
-.bottom-part {
+.consulting-bottom-part {
   font-size: 0;
+  margin-bottom: 30px;
 }
 .consulting-benefits {
   display: inline-block;
@@ -106,7 +107,7 @@ body {
 }
 .p-stones-sub-title {
   color: #0e333d;
-  font-family: "DM Serif Text", serif;
+  font-family: DM Serif Text;
   font-size: 59px;
   text-transform: capitalize;
   margin-bottom: 25px;

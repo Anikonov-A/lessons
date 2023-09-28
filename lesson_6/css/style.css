@@ -107,7 +107,7 @@ body {
 }
 .p-stones-sub-title {
   color: #0e333d;
-  font-family: DM Serif Text;
+  font-family: "DM Serif Text", serif;
   font-size: 59px;
   text-transform: capitalize;
   margin-bottom: 25px;

@@ -1,0 +1,31 @@
+/* Consulting */
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap");
+/* jewellery */
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Infant:700&display=swap");
+/* Euphoria */
+@font-face {
+  font-family: "core_sans";
+  src: url("../fonts/coresansc-65bold-webfont.woff2") format("woff2"),
+    url("../fonts/coresansc-65bold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "causten";
+  src: url("../fonts/causten-regular-webfont.woff2") format("woff2"),
+    url("../fonts/causten-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "causten";
+  src: url("../fonts/causten-bold-webfont.woff2") format("woff2"),
+    url("../fonts/causten-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

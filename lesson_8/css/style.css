@@ -135,7 +135,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   line-height: 1.65;
-  background: url("../img/check-vector.jpg") left no-repeat;
+  background: url("../img/check-vector.jpg") 0 3px no-repeat;
   min-height: 33px;
   padding: 0 0 0 35px;
   margin-bottom: 23px;

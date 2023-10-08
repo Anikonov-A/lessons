@@ -179,6 +179,7 @@ body {
 
 .link {
   color: #fff;
+  display: inline-block;
   text-align: center;
   font-weight: 600;
   text-transform: capitalize;
@@ -353,7 +354,7 @@ body {
 .left-block,
 .right-block {
   width: 613px;
-  height: 640px;
+  min-height: 640px;
   display: inline-block;
   vertical-align: top;
 }
@@ -387,6 +388,7 @@ body {
 }
 .eupho-second-link {
   color: #3c4242;
+  display: inline-block;
   text-align: center;
   font-family: " Causten", sans-serif;
   font-size: 18px;

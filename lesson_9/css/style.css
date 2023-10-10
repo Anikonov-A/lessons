@@ -1,0 +1,801 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+  color: #7d7d7d;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  /* overflow: hidden; */
+}
+/* Header */
+.header {
+  background-color: beige;
+}
+.header-nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 15px 50px;
+}
+.nav-title {
+  font-size: 24px;
+  text-decoration: underline;
+  display: inline-block;
+  margin-right: 400px;
+}
+
+.nav-list,
+.list-item {
+  display: inline-block;
+}
+.list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.page-link {
+  color: #29e3a5;
+  font-weight: 600;
+}
+.page-link::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #24b182;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  visibility: hidden;
+}
+
+.page-link::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #24b182;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 5px;
+  visibility: hidden;
+}
+.page-link:hover::before,
+.page-link:focus::before {
+  color: #24b182;
+  visibility: visible;
+}
+.page-link:hover::after,
+.page-link:focus::after {
+  color: #24b182;
+  visibility: visible;
+}
+.page-link:hover,
+.page-link:focus {
+  color: #24b182;
+}
+.page-link:visited {
+  color: #7d7d7d;
+}
+/* Main */
+/* My practise */
+.practise-wrapper {
+  background-color: #b2afaf;
+  padding: 50px 15px;
+}
+.my-practise {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* page 1 */
+.pages {
+  text-align: center;
+  padding: 25px 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 16px;
+  min-height: 800px;
+  margin-bottom: 150px;
+}
+
+.practise-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+.practise-text {
+  text-align: left;
+  color: aliceblue;
+  margin-bottom: 25px;
+  line-height: 1.65;
+}
+
+.practise-list {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.practise-text span {
+  font-weight: 600;
+  font-size: 24px;
+  color: black;
+}
+.practise-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.practise-list-item:not(:first-child) {
+  padding-left: 50px;
+}
+.nav-link {
+  color: aliceblue;
+  padding: 11px 22px;
+  background-color: #24b182;
+}
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #198c66;
+}
+/* page 2 */
+.hover-list {
+  text-align: center;
+}
+.hover-list > * {
+  display: inline-block;
+}
+.hover-list li:not(:last-child) {
+  margin-right: 10px;
+}
+.hover-list-item:first-child a {
+  background-color: #00008b;
+}
+.hover-list-item:last-child a {
+  background-color: #0a0a63;
+}
+.hover-list-item:last-child span {
+  display: none;
+}
+.hover-list-item:nth-child(2) a {
+  background-color: #3636ec;
+}
+.hover-list-item:first-child a:hover {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.hover-list-item:nth-child(2) a:hover {
+  visibility: hidden;
+}
+.hover-list-item:last-child a:hover span {
+  display: inline-block;
+}
+/* Page 3 */
+.active-list {
+  text-align: center;
+  color: #00008b;
+}
+
+.active-list li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.active-list-item:nth-child(1) a:active {
+  background-color: #00008b;
+  color: #fff;
+  padding: 10px 70px;
+}
+.active-list-item:nth-child(1) a:active::after {
+  content: ' (зараз працює ":active")';
+}
+
+.active-list-item:nth-child(2) a:visited {
+  color: #7d7d7d;
+}
+
+.active-list-item:last-child:active::before,
+.active-list-item:last-child:active::after {
+  content: "=^.^=";
+  width: 60px;
+  height: 30px;
+  border-radius: 12px;
+  background-color: #3636ec;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 6px;
+}
+/* page 4 */
+
+.focus-list li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.focus-list-item:first-child a:focus {
+  color: #198c66;
+  background-color: aliceblue;
+  padding: 10px 12px;
+}
+.focus-list-item:nth-child(2) a:focus::after {
+  content: " Я також у фокусі!!!";
+  text-decoration: underline;
+  display: inline-block;
+  color: #fff;
+}
+.focus-list-item:last-child a:focus {
+  letter-spacing: 15px;
+  color: #24b182;
+  font-weight: 700;
+  outline: 3px dashed #198c66;
+}
+.target-example {
+  margin-bottom: 30px;
+}
+.target-subtitle {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 15px;
+}
+.boxes-block {
+  margin-bottom: 15px;
+}
+.box-btn-block {
+  margin-bottom: 30px;
+}
+.box-btn-block a {
+  color: #fff;
+  padding: 5px 10px;
+}
+.box-btn-block a:nth-child(1) {
+  background-color: #a50606;
+}
+.box-btn-block a:nth-child(2) {
+  background-color: #0d5f0d;
+}
+.box-btn-block a:nth-child(3) {
+  background-color: #00008b;
+}
+.box-btn-block a:not(:last-child) {
+  margin-right: 15px;
+}
+.box {
+  margin: auto;
+  width: 400px;
+  height: 100px;
+  display: none;
+  border: 1px solid #000;
+  color: #fff;
+}
+#box1:target {
+  background-color: #a50606;
+  display: block;
+}
+#box2:target {
+  background-color: #0d5f0d;
+  display: block;
+}
+#box3:target {
+  background-color: #00008b;
+  display: block;
+}
+/* page 5 */
+
+.another-list li:not(:last-child) {
+  margin-bottom: 7px;
+}
+.another-list span {
+  font-weight: 600;
+  color: #000;
+}
+/* page 6 */
+
+.elements-list {
+  text-align: center;
+  font-size: 20px;
+  color: #8a2be2;
+}
+.elements-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.elements-list-item:nth-child(odd)::before,
+.elements-list-item:nth-child(even)::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: inline-block;
+  background-color: #3625b9;
+}
+.elements-list-item:nth-child(odd)::before {
+  background-color: #25b956;
+}
+.elements-list-item:nth-child(even)::after,
+.elements-list-item:nth-child(odd)::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #8d2020;
+}
+.elements-list-item:nth-child(even)::after {
+  background-color: #25b956;
+}
+.elements-list-item:nth-child(3n + 1) {
+  color: #00008b;
+}
+.elements-list-item:nth-child(3n + 2) {
+  color: #25b956;
+}
+.elements-list-item:nth-child(3n + 3) {
+  color: #8d2020;
+}
+/* Game */
+.my-game {
+  max-width: 1270px;
+  margin: auto;
+}
+.game-container {
+  margin: 0 auto;
+  min-height: 800px;
+  max-width: 900px;
+  border: 1px solid gray;
+}
+.game-title {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+/* Ця гра реалізована за допомогою opacity  */
+
+/* .game-square-1,
+.game-square-2,
+.game-square-3,
+.game-square-4,
+.game-square-5,
+.game-square-6,
+.game-square-7,
+.game-square-8,
+.game-square-9,
+.game-square-10 {
+  width: 50px;
+  height: 50px;
+  background-color: #0d5f0d;
+  opacity: 0.1;
+  display: block;
+}
+
+.game-square-1 {
+  display: block;
+  opacity: 1;
+}
+
+.game-square-2 {
+  width: 50%;
+}
+.game-square-3 {
+  margin-left: 399px;
+}
+.game-square-4 {
+  width: 30%;
+  margin-left: 399px;
+}
+.game-square-5 {
+  margin-left: 618px;
+}
+.game-square-6 {
+  width: 668px;
+}
+.game-square-7 {
+  height: 150px;
+}
+.game-square-8 {
+  width: 800px;
+}
+.game-square-9 {
+  margin-left: 775px;
+  width: 25px;
+  height: 250px;
+}
+.game-square-10 {
+  margin-left: 775px;
+  width: 25px;
+}
+.game-container div:last-child {
+  background-color: #a50606;
+}
+.game-square-2:hover,
+.game-square-3:hover,
+.game-square-4:hover,
+.game-square-5:hover,
+.game-square-6:hover,
+.game-square-7:hover,
+.game-square-8:hover,
+.game-square-9:hover,
+.game-square-10:hover {
+  opacity: 1;
+} */
+
+/* Ця гра реалізована за допомогою комбінації селекторів + visibility */
+.bg-color {
+  background-color: #0d5f0d;
+}
+
+.game-square-1,
+.game-square-2,
+.game-square-3,
+.game-square-4,
+.game-square-5,
+.game-square-6,
+.game-square-7,
+.game-square-8,
+.game-square-9,
+.game-square-10 {
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+}
+.game-square-1,
+.game-square-2 {
+  visibility: visible;
+}
+.game-square-1:hover + .game-square-2,
+.game-square-2:hover {
+  width: 300px;
+  height: 50px;
+}
+.game-square-3 {
+  margin-left: 250px;
+}
+.game-square-4 {
+  width: 450px;
+  margin-left: 250px;
+}
+
+.game-square-5 {
+  height: 150px;
+  margin-left: 650px;
+}
+
+.game-square-6 {
+  width: 400px;
+  margin-left: 300px;
+}
+
+.game-square-7 {
+  height: 150px;
+  margin-left: 300px;
+}
+
+.game-square-8 {
+  width: 450px;
+  margin-left: 300px;
+}
+
+.game-square-9 {
+  width: 10px;
+  height: 150px;
+  margin-left: 740px;
+}
+
+.game-square-10 {
+  width: 10px;
+  margin-left: 740px;
+  background-color: #8d2020;
+}
+
+.game-square-2:hover + .game-square-3,
+.game-square-3:hover,
+.game-square-3:hover + .game-square-4,
+.game-square-4:hover,
+.game-square-4:hover + .game-square-5,
+.game-square-5:hover,
+.game-square-5:hover + .game-square-6,
+.game-square-6:hover,
+.game-square-6:hover + .game-square-7,
+.game-square-7:hover,
+.game-square-7:hover + .game-square-8,
+.game-square-8:hover,
+.game-square-8:hover + .game-square-9,
+.game-square-9:hover,
+.game-square-9:hover + .game-square-10,
+.game-square-10:hover {
+  visibility: visible;
+}
+/* Consulting first */
+.consulting-wrapper {
+  max-width: 722px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+.benefits-title,
+.benefits-subtitle,
+.consulting-first-title,
+.consulting-first-subtitle {
+  color: #37393f;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.27;
+  margin-bottom: 12px;
+}
+
+.text {
+  margin-bottom: 42px;
+}
+.text p {
+  margin-bottom: 20px;
+  line-height: 1.46;
+}
+.consulting-first-subtitle {
+  color: #6b77e5;
+  font-size: 20px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb45 {
+  margin-bottom: 45px;
+}
+.benefits-block {
+  font-size: 0;
+  margin-bottom: 50px;
+}
+.img-wrapper {
+  max-width: 331px;
+  margin-right: 29px;
+  display: inline-block;
+  vertical-align: top;
+}
+.text-wrapper {
+  display: inline-block;
+  max-width: 332px;
+}
+.benefits-title {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.benefits-subtitle {
+  color: #40ddb6;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 21px;
+}
+
+.benefits-list-item {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.benefits-list-item::before {
+  content: "";
+  background: url("../img/consulting/checked-round.svg") center no-repeat;
+  width: 27px;
+  height: 27px;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.benefits-list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/* Consulting second */
+.consulting-wrapper-2 {
+  max-width: 705px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+.titles-block {
+  max-width: 420px;
+  margin-bottom: 10px;
+}
+.about-us-subtitle {
+  font-weight: 500;
+  color: #37393f;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.square-title::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #40ddb6;
+  margin-right: 6px;
+}
+.about-us-title {
+  color: #37393f;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.21;
+}
+.about-text {
+  margin-bottom: 48px;
+}
+.about-text p {
+  line-height: 1.46;
+  margin-bottom: 16px;
+  /* Висячий відступ не прибираю на випадок додавання нових параграфів */
+}
+.cards-block {
+  margin-bottom: 69px;
+}
+.cards-block .card:not(:last-child) {
+  margin-bottom: 31px;
+}
+
+.first-card,
+.second-card {
+  max-width: 675px;
+  padding: 41px 28px 38px;
+  border: 1px solid #e3e3e3;
+}
+.text-block {
+  max-width: 550px;
+}
+
+.cards-subtitle::before {
+  content: "";
+  background: url("../img/consulting/checked-round.svg") center no-repeat;
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  margin-right: 19px;
+  vertical-align: middle;
+}
+
+.cards-subtitle {
+  color: #37393f;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.text-block p {
+  line-height: 1.46;
+  padding-left: 46px;
+}
+
+.more-btn {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+  padding: 21px 35px 22px 35px;
+  background: #6b77e5;
+}
+.more-btn:hover {
+  background: #3a449e;
+  transition: all 0.8s ease 0s;
+  border-radius: 12px;
+}
+/* Consulting third */
+.consulting-wrapper-3 {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  text-align: center;
+}
+.titles-block {
+  margin: 0 auto 77px;
+}
+
+.articles-wrapper {
+  font-size: 0;
+}
+.img-wrapper {
+  margin: auto;
+  margin-top: -36px;
+  margin-bottom: 22px;
+}
+.article {
+  max-width: 386px;
+  display: inline-block;
+  min-height: 301px;
+  background: #f4f4f4;
+}
+.article:not(:last-child) {
+  margin-right: 31px;
+}
+.article-content p {
+  font-size: 18px;
+  line-height: 1.46;
+  margin-bottom: 37px;
+}
+.article-title {
+  color: #37393f;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.27;
+  margin-bottom: 16px;
+}
+.article-link {
+  color: #6b77e5;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 58px;
+}
+.article-link:hover {
+  text-decoration: underline;
+  color: #3a449e;
+}
+/* Jewellery shop */
+.jewellery-wrapper {
+  max-width: 1234px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  font-size: 0;
+}
+.left-block {
+  max-width: 488px;
+  vertical-align: top;
+  display: inline-block;
+}
+.title-block {
+  padding-top: 150px;
+}
+.jewellery-subtitle {
+  color: #000;
+  font-family: "Cormorant Infant", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 13px;
+}
+.title-block::after {
+  content: "";
+  display: block;
+  width: 304px;
+  height: 3px;
+  background: #78473b;
+}
+.middle-block {
+  display: inline-block;
+  max-width: 345px;
+  vertical-align: top;
+  padding-top: 32px;
+  margin-right: 35px;
+}
+.img-block-1,
+.img-block-2 {
+  border: 1px solid #000;
+  margin-bottom: 34px;
+}
+.img-block-1 img,
+.img-block-2 img {
+  margin: 9px -10px -9px 10px;
+}
+.middle-block-text,
+.right-block-text {
+  color: #000;
+  font-family: "Cormorant Infant", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.item-title {
+  margin-bottom: 4px;
+}
+.right-text {
+}
+.right-block {
+  max-width: 345px;
+  padding-top: 31px;
+  display: inline-block;
+  vertical-align: top;
+}
+.right-text {
+  color: #000;
+  font-family: "Cormorant Infant", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.13;
+}
+
+.footer {
+  text-align: center;
+}

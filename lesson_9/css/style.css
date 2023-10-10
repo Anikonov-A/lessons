@@ -758,7 +758,6 @@ body {
 .middle-block {
   display: inline-block;
   max-width: 345px;
-  vertical-align: top;
   padding-top: 32px;
   margin-right: 55px;
 }
@@ -787,13 +786,13 @@ body {
 
 .right-block {
   max-width: 335px;
-  padding-top: 31px;
   display: inline-block;
   vertical-align: top;
 }
 .right-text {
   font-size: 46px;
   line-height: 1.13;
+  margin-bottom: 31px;
 }
 
 .footer {

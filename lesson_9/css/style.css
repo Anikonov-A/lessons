@@ -614,7 +614,7 @@ body {
 .about-text {
   margin-bottom: 48px;
 }
-.about-text p {
+.about-text p:not(:last-child) {
   line-height: 1.46;
   margin-bottom: 16px;
   /* Висячий відступ не прибираю на випадок додавання нових параграфів */

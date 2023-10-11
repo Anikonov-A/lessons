@@ -573,7 +573,7 @@ body {
   width: 27px;
   height: 27px;
   margin-right: 8px;
-  vertical-align: middle;
+  margin-bottom: -7px;
   display: inline-block;
 }
 .benefits-list-item:not(:last-child) {

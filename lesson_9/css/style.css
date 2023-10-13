@@ -613,10 +613,13 @@ body {
   line-height: 1.21;
 }
 .about-text {
+  line-height: 1.46;
   margin-bottom: 48px;
 }
-.about-text p:not(:last-child) {
+.about-text p {
   line-height: 1.46;
+}
+.about-text p:not(:last-child) {
   margin-bottom: 16px;
   /* Висячий відступ не прибираю на випадок додавання нових параграфів */
 }
@@ -693,6 +696,9 @@ body {
   margin-top: -36px;
   margin-bottom: 22px;
 }
+.img-wrapper img {
+  max-width: 100%;
+}
 .article {
   max-width: 386px;
   display: inline-block;
@@ -701,6 +707,9 @@ body {
 }
 .article:not(:last-child) {
   margin-right: 31px;
+}
+.article-content {
+  padding: 0 20px 58px;
 }
 .article-content p {
   font-size: 18px;
@@ -720,7 +729,6 @@ body {
   font-size: 18px;
   font-weight: 600;
   text-transform: capitalize;
-  margin-bottom: 58px;
 }
 .article-link:hover {
   text-decoration: underline;
@@ -741,6 +749,15 @@ body {
 .title-block {
   padding-top: 150px;
 }
+.jewell-card:hover .img-block-1 img,
+.jewell-card:hover .img-block-2 img {
+  margin: 0;
+}
+.jewell-card:hover .middle-block-text,
+.jewell-card:hover .right-block-text {
+  text-decoration: underline;
+}
+
 .jewellery-subtitle {
   color: #000;
   font-family: "Cormorant Infant", sans-serif;
@@ -770,6 +787,7 @@ body {
 .img-block-1 img,
 .img-block-2 img {
   margin: 9px -10px -9px 10px;
+  transition: all 0.3s;
 }
 .middle-block-text,
 .right-block-text,

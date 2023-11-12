@@ -1,0 +1,464 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #00d8ff;
+  background-color: #282d35;
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: #37393f;
+}
+.header--fixed {
+  position: fixed;
+  z-index: 99;
+}
+.main {
+  padding-top: 80px;
+}
+
+.header__container,
+.main__container,
+.footer__container {
+  max-width: 1250px;
+  padding: 30px 15px;
+  margin: 0 auto;
+}
+
+.wrapper-practise__title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.grid-cards {
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 0;
+}
+.grid-cards__card {
+  display: inline-block;
+  width: 33.33%;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.card-transition__title,
+.card-animation__title {
+  margin-bottom: 10px;
+}
+.card-transition__body,
+.card-animation__body {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #37393f;
+  background-color: #37393f;
+}
+
+.card-transition__card,
+.card-animation__card {
+  width: 250px;
+  height: 250px;
+  background-color: #00d8ff;
+}
+
+.card-transition__card--duration {
+  transition-duration: 0.4s;
+}
+.card-transition__body:hover .card-transition__card--duration {
+  /* transition-duration: 0.4s; */
+  transform: rotate(45deg) scale(0.6);
+  background-color: #fb8b03;
+}
+.card-transition__card--property {
+  transition-duration: 0.4s, 0.3s, 0.6s, 1s;
+  transition-property: width, height, background-color, transform;
+}
+.card-transition__body:hover .card-transition__card--property {
+  height: 125px;
+  width: 125px;
+  background-color: #fb8b03;
+  transform: scale(0.6) rotate(-145deg);
+}
+
+.card-transition__card--delay {
+  transition-delay: 0.3s, 0.5s, 0.8s;
+  transition-duration: 0.3s, 0.6s, 0.4s;
+  transition-property: transform-origin, transform, background-color;
+}
+
+.card-transition__body:hover .card-transition__card--delay {
+  transform-origin: 50%;
+  transform: scale(0.1) skew(45deg);
+  background-color: #fb8b03;
+}
+.card-transition__card--tt-function {
+  transition-duration: 0.4s;
+  transition-property: all;
+}
+.card-transition__body:hover .card-transition__card--tt-function {
+  transition-timing-function: cubic-bezier(0.26, 0.04, 0, 2.02);
+  width: 100px;
+  height: 100px;
+  /* position: relative;
+  left: 50%; */
+  background-color: #fb8b03;
+}
+.card-transition__card--universal {
+  transition: all 0.5s steps(10, start);
+}
+.card-transition__body:hover .card-transition__card--universal {
+  transform: scale(0.2);
+  background-color: #fb8b03;
+}
+
+.card-animation__card--rotate {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+.card-animation__body:hover .card-animation__card--rotate {
+  animation-name: rotate;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+.card-animation__card--duration {
+  animation-duration: 1s;
+}
+.card-animation__body:hover .card-animation__card--duration {
+  animation-name: rotate-scale;
+}
+@keyframes rotate-scale {
+  0% {
+    transform: scale(0.4) rotateZ(0);
+  }
+  50% {
+    transform: scale(1.2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(0.4) rotateZ(360deg);
+  }
+}
+.card-animation__card--tt-function {
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.1s;
+}
+
+.card-animation__body:hover .card-animation__card--tt-function {
+  animation-name: bounce-in-top;
+}
+
+@keyframes bounce-in-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+.card-animation__card--i-count {
+  animation-duration: 3s;
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.card-animation__card--direction {
+  animation-duration: 2s;
+  animation-name: rotate-scale;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.card-animation__body:hover .card-animation__card--direction {
+  animation-play-state: paused;
+}
+
+.main__practise-wrapper {
+  margin-bottom: 50px;
+}
+.main__car-wrapper {
+  min-height: 70vh;
+  padding-top: 150px;
+}
+.car-body {
+  animation: ride-to-start 5s forwards, ride 5s forwards 5s;
+}
+@keyframes ride-to-start {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes ride {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(200%, 0);
+  }
+}
+.road {
+  min-width: 5000px;
+  position: relative;
+  left: -500px;
+  top: 400px;
+  z-index: -10;
+  background-color: #282d35;
+  border-top: 4px solid #fff;
+  min-height: 300px;
+  border-bottom: 4px solid #fff;
+}
+.road__start {
+  width: 100px;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  bottom: 0;
+  left: 1500px;
+  transform: skew(45deg);
+}
+.start__block {
+  width: 50px;
+  height: 25px;
+  background-color: #000;
+  display: block;
+}
+.start__block:nth-child(even) {
+  transform: translate(50px, 0);
+}
+
+.car-body__wheel {
+  width: 150px;
+  height: 150px;
+  background-color: #464554;
+  border-radius: 50%;
+}
+.car-body__wheel--rotate {
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+}
+.wheel__tyre {
+  width: 120px;
+  height: 120px;
+  background-color: #000000;
+  border-radius: 50%;
+  transform: translate(15px, 15px);
+}
+.wheel__rim {
+  width: 60px;
+  height: 60px;
+  background-color: #464554;
+  transform: translate(30px, 30px);
+  border-radius: 50%;
+}
+
+.wheel__disk {
+  width: 20px;
+  height: 60px;
+  background-color: #fb8b03;
+  border-radius: 100% 0% 0% 100% / 48% 48% 52% 52%;
+  transform: rotate(20deg) translate(0, -7px);
+}
+.wheel__dot {
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 50%;
+  transform: translate(20px, 20px);
+}
+.wheel__dot span:nth-child(1) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(0, 20px);
+}
+.wheel__dot span:nth-child(2) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(-27px, -42px) rotate(50deg);
+}
+.wheel__dot span:nth-child(3) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(28px, -95px) rotate(-57deg);
+}
+.wheel__dot span:nth-child(4) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(33px, -173px) rotate(-100deg);
+}
+.wheel__dot span:nth-child(5) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(13px, -248px) rotate(-156deg);
+}
+.wheel__dot span:nth-child(7) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(-36px, -323px) rotate(-256deg);
+}
+.wheel__dot span:nth-child(6) {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #12121e;
+  border-top: transparent;
+  display: block;
+  border-radius: 0% 0% 40% 45% / 10% 10% 34% 34%;
+  transform: translate(-17px, -297px) rotate(-206deg);
+}
+
+.bodywork__body {
+  width: 510px;
+  height: 70px;
+  background-color: #00d8ff;
+  border: 4px solid #000;
+}
+.bodywork__body::after {
+  content: "";
+  width: 300px;
+  height: 30px;
+  display: block;
+  border: 4px solid #000;
+  border-right: 20px solid #000;
+  position: relative;
+  top: 33px;
+  left: 68px;
+}
+
+.bodywork__spoiler {
+  transform: translate(-69px, 98px);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid #fb8b03;
+}
+.bodywork__roof {
+  width: 0;
+  height: 0;
+  border-left: 159px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 75px solid #00d8ff;
+}
+
+.bodywork__pilot {
+  z-index: -1;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  transform: translate(158px, -109px);
+}
+.bodywork__bumper {
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 132px solid transparent;
+  border-bottom: 65px solid #00d8ff;
+  position: relative;
+  top: -71px;
+  left: 505px;
+}
+
+.car-body__wheel--position-left {
+  position: relative;
+  top: -180px;
+  left: -96px;
+}
+.car-body__wheel--position-right {
+  position: relative;
+  top: -330px;
+  left: 379px;
+  transform: rotate(180deg);
+}
+
+.footer {
+  background-color: #37393f;
+}
+.footer__container {
+  text-align: center;
+}

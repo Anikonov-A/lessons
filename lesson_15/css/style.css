@@ -380,6 +380,9 @@ body {
   display: flex;
   gap: 7px;
 }
+.block-details__status-part {
+  text-align: right;
+}
 .block-details__date-part > div,
 .block-details__status-part > div {
   color: #807d7e;

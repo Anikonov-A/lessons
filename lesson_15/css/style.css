@@ -30,23 +30,28 @@ body {
 }
 
 .header__container {
-  padding: 31px 0;
+  padding: 31px 15px;
   display: flex;
-  flex: 0 1 auto;
   background: #fff;
+  align-items: center;
+  gap: 60px;
 }
-.container {
+.container__left {
   display: flex;
   align-items: center;
+  gap: 60px;
+  flex-grow: 1;
 }
 .container__logo {
-  margin-right: 163px;
+  flex-grow: 1;
+  /* margin-right: 163px; */
 }
 .container__search-block {
-  margin-right: 210px;
+  flex-grow: 1;
+  /* margin-right: 210px; */
 }
 .container__select {
-  margin-right: 60px;
+  /* margin-right: 60px; */
 }
 .block-search__input-field {
   padding: 12px 48px 12px 65px;
@@ -54,6 +59,7 @@ body {
   background-color: #f6f6f6;
   max-width: 184px;
   font-weight: 500;
+  display: inline-block;
 }
 .block-search {
   position: relative;
@@ -66,7 +72,7 @@ body {
   height: 20px;
   position: absolute;
   left: 38px;
-  top: -2px;
+  top: 10px;
 }
 
 .body-select {
@@ -120,6 +126,7 @@ body {
 .block-button {
   display: flex;
   gap: 29px;
+  /* margin-left: auto; */
 }
 .block-button__button {
   padding: 12px 48px;
@@ -152,10 +159,11 @@ body {
 /* ========================Categories For Men====================================================== */
 .main__categories-men {
   padding-top: 150px;
+}
+.container-categories__cards-wrapper {
   margin: 0 -25px;
 }
 .container-categories__title {
-  margin-left: 20px;
   color: #3c4242;
   font-family: " Core Sans", sans-serif;
   font-size: 34px;
@@ -177,13 +185,13 @@ body {
 .wrapper-cards {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 50px;
 }
 .wrapper-cards__column {
   padding: 0 25px;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 25%;
-  margin-bottom: 50px;
 }
 .categories-item {
   display: flex;
@@ -205,11 +213,14 @@ body {
 .categories-item__body {
   display: flex;
   flex-grow: 1;
+  gap: 10px;
+  justify-content: space-between;
 }
 .categories-item__content {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   display: flex;
   flex-direction: column;
+  /* row-gap: 10px; */
 }
 
 .categories-item__title:not(:last-child) {
@@ -234,7 +245,7 @@ body {
 /* ========================Wishlist============================================================== */
 
 .main__wishlist {
-  margin-bottom: 150px;
+  padding: 150px 0;
 }
 
 .container-wishlist__title,
@@ -265,11 +276,15 @@ body {
   align-items: center;
   gap: 36px;
 }
-
+.item-about__close-btn {
+  width: 22px;
+  flex-shrink: 0;
+}
 .item-about__product-img {
   overflow: hidden;
   border-radius: 4px;
   flex-shrink: 0;
+  width: 110px;
 }
 .item-about__product-img img {
   width: 100%;

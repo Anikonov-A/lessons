@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 16</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/ico/favicon.ico">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header--fixed">
+			<div class="header__container container">
+				<div class="container__left">
+					<a href="#" class="container__logo">
+						<img src="img/logo.svg" alt="logo">
+					</a>
+					<div class="container__search-block block-search">
+						<button type="submit"><img src="img/search.svg" alt="search"></button>
+						<input type="search" name="search" placeholder="Search" class="block-search__input-field">
+					</div>
+					<div class="container__select select">
+						<ul class="select__body body-select">
+							<li class="body-select__language-link link-language">English(United States)
+								<ul class="link-language__menu menu-language">
+									<li class="menu-language__item">
+										<a href="#" class="menu-language__link">Ukrainian(Ukraine)</a>
+									</li>
+									<li class="menu-language__item">
+										<a href="#" class="menu-language__link">French(France)</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container__button-block block-button">
+					<a href="#" class="block-button__button block-button__button--login">Login</a>
+					<a href="#" class="block-button__button block-button__button--sign-up">Sing Up</a>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__consulting-form form-consulting">
+				<div class="form-consulting__container">
+					<h5 class="form-consulting__subtitle">Contact Us</h5>
+					<h2 class="form-consulting__title">Request A Call Back !</h2>
+					<form action="#" method="post" enctype="multipart/form-data" class="form-consulting__form consulting-form">
+						<div class="consulting-form__form-row row-form">
+							<div class="row-form__input">
+								<input type="text" required placeholder="Your name" tabindex="1">
+							</div>
+							<div class="row-form__input">
+								<input type="email" required placeholder="email address" tabindex="2">
+							</div>
+						</div>
+						<div class="consulting-form__form-row row-form">
+							<div class="row-form__input">
+								<input type="tel" required placeholder="phone number" tabindex="3">
+							</div>
+							<div class="row-form__input">
+								<input type="text" placeholder="subject" tabindex="4">
+							</div>
+						</div>
+						<textarea name="callback" class="consulting-form__text-area" placeholder="Message..." tabindex="5"></textarea>
+						<button type="submit" class="consulting-form__button" tabindex="6">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="main__euphoria-info info-form">
+				<div class="info-form__container">
+					<h3 class="info-form__title">My Info</h3>
+					<h4 class="info-form__subtitle">Add Address</h4>
+					<form action="#" method="get" enctype="multipart/form-data" class="info-form__euphoria-form form-euphoria">
+						<div class="form-euphoria__input-row row-input">
+							<div class="row-input__input">
+								<label for="name">First Name*</label>
+								<input type="text" name="name" id="name" required placeholder="First Name">
+							</div>
+							<div class="row-input__input">
+								<label for="last-name">Last Name*</label>
+								<input type="text" name="lastName" id="last-name" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="form-euphoria__input-row row-input">
+							<div class="row-input__input">
+								<label for="country">Country / Region*</label>
+								<input type="text" name="country" id="country" required placeholder="Country / Region*">
+							</div>
+							<div class="row-input__input">
+								<label for="company-name">Company Name</label>
+								<input type="text" name="company-name" id="company-name" placeholder="Company (optional)">
+							</div>
+						</div>
+						<div class="form-euphoria__input-row row-input">
+							<div class="row-input__input">
+								<label for="address">Street Address*</label>
+								<input type="text" name="address" id="address" required placeholder="House number and street name">
+							</div>
+							<div class="row-input__input">
+								<label for="apt">Apt, suite, unit</label>
+								<input type="text" name="apt" id="apt" placeholder="apartment, suite, unit, etc. (optional)">
+							</div>
+						</div>
+						<div class="form-euphoria__input-row row-input">
+							<div class="row-input__input">
+								<label for="city">City*</label>
+								<input type="text" name="city" id="city" required placeholder="Town / City">
+							</div>
+							<div class="row-input__input row-input__input--select">
+								<label for="state">State*</label>
+								<select name="state" id="state">
+									<option value="state" disabled selected hidden>State</option>
+									<option value="state1">State1</option>
+									<option value="state2">State2</option>
+									<option value="state3">State3</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-euphoria__input-row row-input">
+							<div class="row-input__input">
+								<label for="phone">Phone*</label>
+								<input type="tel" name="phone" id="phone" required placeholder="First Name">
+							</div>
+							<div class="row-input__input">
+								<label for="post">Postal Code*</label>
+								<input type="text" name="postalCode" id="post" required placeholder="Postal Code*">
+							</div>
+						</div>
+						<div class="form-euphoria__text-area">
+							<label for="delivery">Delivery Instruction</label>
+							<textarea name="delivery" id="delivery" placeholder="Delivery Instruction"></textarea>
+						</div>
+						<div class="form-euphoria__checkbox-wrapper wrapper-checkbox">
+							<div class="wrapper-checkbox__checkbox">
+								<input type="checkbox" id="checkbox1">
+								<label for="checkbox1">Set as default shipping address</label>
+							</div>
+							<div class="wrapper-checkbox__checkbox">
+								<input type="checkbox" id="checkbox2">
+								<label for="checkbox2">Set as default billing address</label>
+							</div>
+						</div>
+						<div class="form-euphoria__button-box box-button">
+							<button type="submit" class="box-button__submit">Save</button>
+							<button type="reset" class="box-button__reset">Cancel</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="main__euphoria-checkout checkout-euphoria">
+				<div class="checkout-euphoria__container">
+					<h2 class="checkout-euphoria__title">Check Out</h2>
+					<h3 class="checkout-euphoria__subtitle">Billing Details</h3>
+					<form action="#" method="post" enctype="multipart/form-data" name="userForm" class="checkout-euphoria__user-form form-user">
+						<div class="form-user__input-row row-inputs">
+							<div class="row-inputs__input">
+								<label for="first-name">First Name*</label>
+								<input type="text" id="first-name" required placeholder="First Name">
+							</div>
+							<div class="row-inputs__input">
+								<label for="surname">Last Name*</label>
+								<input type="text" required placeholder="Last Name" id="surname">
+							</div>
+						</div>
+						<div class="form-user__input-row row-inputs">
+							<div class="row-inputs__input">
+								<label for="region">Country / Region*</label>
+								<input type="text" required placeholder="Country / Region" id="region">
+							</div>
+							<div class="row-inputs__input">
+								<label for="company">Company Name</label>
+								<input type="text" placeholder="Company Name" id="company">
+							</div>
+						</div>
+						<div class="form-user__input-row row-inputs">
+							<div class="row-inputs__input">
+								<label for="street-address">Street Address*</label>
+								<input type="text" required placeholder="Street Address" id="street-address">
+							</div>
+							<div class="row-inputs__input">
+								<label for="apartment">Apt, suite, unit</label>
+								<input type="text" required placeholder="Apt, suite, unit" id="apartment">
+							</div>
+						</div>
+						<div class="form-user__input-row row-inputs form-user__input-row--three">
+							<div class="row-inputs__input">
+								<label for="town">City*</label>
+								<input type="text" required placeholder="Town / City" id="town">
+							</div>
+							<div class="row-inputs__input  row-inputs__input--select">
+								<label for="state-select">State*</label>
+								<select name="state" id="state-select">
+									<option value="state" disabled hidden selected>State</option>
+									<option value="state1">State1</option>
+									<option value="state2">State2</option>
+								</select>
+							</div>
+							<div class="row-inputs__input ">
+								<label for="post-code">Postal Code*</label>
+								<input type="text" required placeholder="Postal Code" id="post-code">
+							</div>
+						</div>
+						<div class="form-user__input-row row-inputs">
+							<div class="row-inputs__input">
+								<label for="telephone">Phone*</label>
+								<input type="tel" required placeholder="Phone" id="telephone">
+							</div>
+							<div class="row-inputs__input">
+								<input type="tel" required placeholder="Phone" disabled hidden>
+							</div>
+						</div>
+						<button type="submit" class="form-user__continue-button">Continue to delivery</button>
+						<div class="form-user__checkbox">
+							<input type="checkbox" name="userCheckbox" id="checkbox3">
+							<label for="checkbox3">Save my information for a faster checkout</label>
+						</div>
+					</form>
+					<form action="#" method="post" enctype="multipart/form-data" name="shippingForm" class="checkout-euphoria__form-shipping shipping-form">
+						<h3 class="shipping-form__title">Shipping Address</h3>
+						<h5 class="shipping-form__subtitle">Select the address that matches your card or payment method.</h5>
+						<div class="shipping-form__radio-block block-radio">
+							<div class="block-radio__radio">
+								<input type="radio" id="same" checked name="shipping">
+								<label for="same">Same as Billing address</label>
+							</div>
+							<div class="block-radio__radio">
+								<input type="radio" id="different" name="shipping">
+								<label for="different">Use a different shipping address</label>
+							</div>
+						</div>
+						<h3 class="shipping-form__title shipping-form__title--pt shipping-form__title-mb">Shipping Method</h3>
+						<div class="shipping-form__method-shipping shipping-method">
+							<div class="shipping-method__top-block">
+								<h5>Arrives by Monday, June 7</h5>
+							</div>
+							<div class="shipping-method__bottom-block block-bottom">
+								<div class="block-bottom__left-part">
+									<h5>Delivery Charges</h5>
+									<h6>Additional fess may apply </h6>
+								</div>
+								<h5 class="block-bottom__right">$5.00</h5>
+							</div>
+						</div>
+						<h3 class="shipping-form__title shipping-form__title--pt">Payment Method</h3>
+						<h5 class="shipping-form__subtitle">All transactions are secure and encrypted.</h5>
+						<div class="shipping-form__payment-method method-payment">
+							<input type="radio" id="payment-card" name="payment" checked>
+							<label for="payment-card">Credit Card</label>
+							<h6 class="method-payment__subtitle">We accept all major credit cards.</h6>
+							<ul class="method-payment__list">
+								<li><img src="img/gpay.svg" alt="gpay"></li>
+								<li><img src="img/visa.svg" alt="visa"></li>
+								<li><img src="img/paypal.svg" alt="paypal"></li>
+								<li><img src="img/paypass.svg" alt="paypass"></li>
+							</ul>
+							<div class="method-payment__inputs-block block-inputs">
+								<div class="block-inputs__row row-payment">
+									<input type="text" name="card-number" placeholder="Card number" required>
+									<input type="text" name="name-of-card" placeholder="Name of card" required>
+								</div>
+								<div class="block-inputs__row row-payment">
+									<input type="text" name="exp-date" placeholder="Expiration date (MM/YY)" required>
+									<input type="text" name="sec-code" placeholder="Security Code" required>
+								</div>
+							</div>
+							<div class="method-payment__cash ">
+								<input type="radio" id="payment-cash" name="payment">
+								<label for="payment-cash">Cash on delivery</label>
+								<h6 class="method-payment__subtitle">Pay with cash upon delivery.</h6>
+							</div>
+							<div class="method-payment__paypal">
+								<input type="radio" id="payment-paypal" name="payment">
+								<label for="payment-paypal">Paypal</label>
+							</div>
+						</div>
+						<button type="submit" class="shipping-form__button">Pay Now</button>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">This is footer</footer>
+	</div>
+</body>
+
+</html>

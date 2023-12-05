@@ -324,8 +324,16 @@ main {
   margin: 0 auto 77px;
   justify-content: center;
   gap: 41px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.27;
 }
 .block-earrings__navigation a:first-child {
+  text-decoration: underline;
+}
+.block-earrings__navigation a:hover {
   text-decoration: underline;
 }
 .block-earrings__earrings-cards {

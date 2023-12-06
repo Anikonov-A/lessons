@@ -87,10 +87,10 @@ main {
 .block-cards__blog-card:hover .card-blog__title {
   text-decoration: underline;
 }
-.cart-blog__readmore-link:hover img {
+.card-blog__readmore-link:hover img {
   transform: scale(1.04);
 }
-.cart-blog__readmore-link:hover {
+.card-blog__readmore-link:hover {
   text-decoration: underline;
 }
 .card-blog__img-link {
@@ -114,7 +114,7 @@ main {
 .card-blog__text {
   line-height: 1.6;
 }
-.cart-blog__readmore-link {
+.card-blog__readmore-link {
   color: #f55529;
   font-weight: 800;
   line-height: 1.5;
@@ -125,7 +125,7 @@ main {
   gap: 1%;
   transition: text-decoration 0.3s;
 }
-.cart-blog__readmore-link img {
+.card-blog__readmore-link img {
   transition: transform 0.3s;
 }
 @media (max-width: 1199.98px) {

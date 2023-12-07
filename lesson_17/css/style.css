@@ -130,14 +130,12 @@ main {
 @media (max-width: 1199.98px) {
   .pages__indian-blog {
     padding: 50px 0;
+    background: #fefaf4;
   }
 }
 @media (max-width: 990.98px) {
   .block-cards__blog-card {
     flex: 0 0 48%;
-  }
-  .pages__indian-blog {
-    background: #fefaf4;
   }
 }
 @media (max-width: 767.98px) {
@@ -272,6 +270,7 @@ main {
   }
   .block-rings__card-block {
     margin-bottom: 34px;
+    text-align: center;
   }
 }
 
@@ -392,6 +391,7 @@ main {
 @media (max-width: 767.98px) {
   .cards-earrings__card {
     flex: 1 0 47%;
+    text-align: center;
   }
   .block-earrings__title {
     font-size: 38px;

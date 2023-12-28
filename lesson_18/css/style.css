@@ -116,7 +116,7 @@ body {
   width: 200px;
   border-radius: 15px;
   padding: 15px;
-  background-color: rgba(255, 147, 74, 1);
+  background-color: rgb(247, 115, 26);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 @media (any-hover: hover) {
@@ -196,7 +196,7 @@ body {
     transition: left 0.3s ease 0s;
     overflow: auto;
     padding: 70px 15px 30px 15px;
-    background-color: rgba(255, 147, 74, 0.5);
+    background-color: rgba(255, 147, 74, 1);
     text-align: right;
   }
   .menu__body::before {
@@ -208,7 +208,7 @@ body {
     right: -100%;
     z-index: 2;
     transition: right 0.3s ease 0s;
-    background-color: #ec9420;
+    background-color: rgb(247, 115, 26);
   }
   .menu-open .menu__body {
     left: 0;

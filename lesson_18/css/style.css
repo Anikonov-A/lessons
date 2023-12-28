@@ -216,6 +216,9 @@ body {
   .menu-open .menu__body::before {
     right: 0;
   }
+  .menu-open body {
+    overflow: hidden;
+  }
   .menu__list {
     flex-direction: column;
     row-gap: 25px;

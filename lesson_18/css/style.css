@@ -196,7 +196,7 @@ body {
     transition: left 0.3s ease 0s;
     overflow: auto;
     padding: 70px 15px 30px 15px;
-    background-color: rgba(255, 147, 74, 1);
+    background-color: rgb(255, 166, 107);
     text-align: right;
   }
   .menu__body::before {

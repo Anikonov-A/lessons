@@ -436,7 +436,6 @@ body {
 // ======================Men=================================//
 // TITLE //
 .title {
-  margin-bottom: 70px;
   color: #3c4242;
   font-family: "Core Sans C", sans-serif;
   font-size: 34px;
@@ -445,17 +444,7 @@ body {
   letter-spacing: 0.68px;
   padding-left: 20px;
   position: relative;
-  @media (max-width: 991.98px) {
-    margin-bottom: 35px;
-    font-size: 30px;
-  }
-  @media (max-width: 768px) {
-    margin-bottom: 20px;
-    font-size: 26px;
-  }
-  @media (max-width: 575px) {
-    font-size: 22px;
-  }
+
   &::before {
     content: "";
     position: absolute;
@@ -465,6 +454,22 @@ body {
     width: 6px;
     border-radius: 10px;
     background: #8a33fd;
+  }
+  @media (max-width: 991.98px) {
+    font-size: 30px;
+    &::before {
+      top: 3px;
+    }
+  }
+  @media (max-width: 768px) {
+    font-size: 26px;
+    padding-left: 15px;
+    &::before {
+      top: 2px;
+    }
+  }
+  @media (max-width: 575px) {
+    font-size: 22px;
   }
 }
 
@@ -477,6 +482,16 @@ body {
     }
     @media (max-width: 991.98px) {
       margin-bottom: 35px;
+    }
+    .women-categories__title,
+    .men-categories__title {
+      margin-bottom: 70px;
+      @media (max-width: 991.98px) {
+        margin-bottom: 35px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
     }
   }
 }

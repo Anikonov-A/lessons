@@ -537,9 +537,8 @@ body {
     overflow: hidden;
     border-radius: 10px;
     @media (max-width: 420px) {
-      & {
         margin-bottom: 7px;
-      }
+      
     }
     img {
       width: 100%;
@@ -561,9 +560,7 @@ body {
   }
   &__text {
     @media (max-width: 420px) {
-      & {
         text-align: center;
-      }
     }
     flex-grow: 1;
     h6 {

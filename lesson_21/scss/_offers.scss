@@ -1,0 +1,112 @@
+.page {
+  &__offers {
+    margin-bottom: 100px;
+    @include max-screen(950px) {
+      margin-bottom: 70px;
+    }
+    @include max-screen(575px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.offers {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    column-gap: 30px;
+    row-gap: 20px;
+
+    font-family: "Core Sans C", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    @include max-screen(950px) {
+      gap: 15px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    padding: 57px 0 55px 30px;
+    border-radius: 12px;
+    @include max-screen(575px) {
+      padding: 30px 0px 30px 20px;
+    }
+    @include any-hover {
+      &:nth-child(odd) .offers__body a:hover {
+        color: #87639e;
+      }
+      &:nth-child(even) .offers__body a:hover {
+        color: #ffc45b;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 605/355;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  &__body {
+    position: relative;
+    max-width: 264px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 30px;
+    height: 100%;
+    a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.5;
+      text-decoration-line: underline;
+      transition: all 0.3s ease 0s;
+      @include max-screen(575px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  // .offers__content
+
+  &__content {
+    flex-grow: 1;
+    h6 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      line-height: 1.67;
+      margin-bottom: 24px;
+      @include max-screen(575px) {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+    }
+    h3 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.32;
+      margin-bottom: 9px;
+      @include max-screen(575px) {
+        font-size: 28px;
+        margin-bottom: 6px;
+      }
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.56;
+    }
+  }
+}

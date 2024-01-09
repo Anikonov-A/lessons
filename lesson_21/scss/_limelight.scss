@@ -1,0 +1,118 @@
+.page {
+  &__limelight {
+    margin-bottom: 70px;
+    @include max-screen(991px) {
+      margin-bottom: 35px;
+    }
+  }
+}
+.limelight {
+  &__title {
+    margin-bottom: 70px;
+    @include max-screen(991px) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+    @include max-screen(991px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @include max-screen(575px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include max-screen(480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.card-item {
+  position: relative;
+  @include any-hover {
+    h5 {
+      text-decoration: underline #3c4242;
+    }
+  }
+  &__img {
+    border-radius: 12px;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    @include max-screen(1100px) {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+      height: 100%;
+      transition: all 0.3s ease 0s;
+      @include any-hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &__favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__info-limelight {
+    h5 {
+      color: #3c4242;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: underline transparent;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: clip;
+      overflow: hidden;
+
+      margin-bottom: 5px;
+      transition: all 0.3s ease 0s;
+    }
+    div {
+      color: #807d7e;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+      text-decoration: underline transparent;
+    }
+  }
+
+  &__price {
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #f6f6f6;
+    color: #3c4242;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: all 0.3s ease 0s;
+
+    @include any-hover {
+      background-color: #8b33fd;
+      color: #fff;
+    }
+  }
+}

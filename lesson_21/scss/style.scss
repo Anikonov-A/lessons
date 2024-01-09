@@ -1,0 +1,51 @@
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+@import "_mixin.scss";
+
+@import "_hero.scss";
+@import "_offers.scss";
+@import "_arrival.scss";
+@import "_fashion.scss";
+@import "_sales.scss";
+@import "_header.scss";
+@import "_grids.scss";
+@import "_brands.scss";
+@import "_limelight.scss";
+@import "_feedback.scss";
+@import "_footer.scss";
+
+body {
+  color: #807d7e;
+  font-family: "Causten", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  & > main {
+    flex-grow: 1;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.menu-open {
+  body {
+    overflow: hidden;
+  }
+}
+
+.page {
+  & > *:first-child {
+    padding-top: 130px;
+  }
+}

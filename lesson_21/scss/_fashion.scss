@@ -1,0 +1,157 @@
+.page {
+  &__fashion {
+    margin-bottom: 100px;
+    @include max-screen(1150px) {
+      margin-bottom: 50px;
+    }
+    @include max-screen(991.98px) {
+      margin-bottom: 35px;
+    }
+  }
+}
+.fashion {
+  &__block {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  &__left-part {
+    flex-basis: 50%;
+    position: relative;
+    padding: 183px 74px;
+    @include max-screen(1200px) {
+      padding: 130px 50px;
+    }
+    @include max-screen(1070px) {
+      padding: 100px 40px;
+    }
+    @include max-screen(960px) {
+      padding: 80px 30px;
+    }
+    @include max-screen(760px) {
+      padding: 40px 15px;
+    }
+    @include max-screen(575px) {
+      flex-basis: 100%;
+      text-align: center;
+      padding: 20px 15px;
+    }
+  }
+  .part-left {
+    &__content {
+      position: relative;
+      max-width: 466px;
+    }
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        aspect-ratio: 613 / 639;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    &__title {
+      color: #fff;
+      font-family: "Core Sans C", sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.47;
+      letter-spacing: 0.208px;
+      margin-bottom: 30px;
+      @include max-screen(1070px) {
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
+      @include max-screen(960px) {
+      }
+      @include max-screen(760px) {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      @include max-screen(575px) {
+        font-size: 20px;
+      }
+    }
+
+    &__text {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+      @include max-screen(1070px) {
+        font-size: 18px;
+      }
+      @include max-screen(960px) {
+        font-size: 16px;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+      @include max-screen(480px) {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &__button {
+      border-radius: 8px;
+      background: #fff;
+      padding: 12px 44px;
+
+      color: #3c4242;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.2;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #8b33fd81;
+          color: #fff;
+        }
+      }
+
+      @include max-screen(1070px) {
+        padding: 12px 44px;
+      }
+      @include max-screen(960px) {
+        padding: 10px 36px;
+      }
+    }
+  }
+  // .fashion__right-part
+  &__right-part {
+    flex-basis: 50%;
+    position: relative;
+    @include max-screen(575px) {
+      display: none;
+    }
+    .part-right {
+      &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        img {
+          aspect-ratio: 613 / 639;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+  }
+}

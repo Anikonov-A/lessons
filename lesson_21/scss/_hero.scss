@@ -1,0 +1,194 @@
+.page__hero {
+  margin-bottom: 130px;
+  position: relative;
+  @include max-screen(1300px) {
+    margin-bottom: 70px;
+  }
+  @include max-screen(768px) {
+    margin-bottom: 35px;
+  }
+}
+.hero {
+  padding: 13.3% 18.1%;
+  @include max-screen(1750px) {
+    padding: 12% 15%;
+  }
+  @include max-screen(1630px) {
+    padding: 15% 10%;
+  }
+
+  @include max-screen(1300px) {
+    padding: 12% 10%;
+  }
+  @include max-screen(1130px) {
+    padding: 15% 10%;
+  }
+  @include max-screen(991px) {
+    padding: 7% 7%;
+  }
+  @include max-screen(768px) {
+    padding: 1%;
+  }
+  // .hero__image
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include max-screen(418px) {
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1449/716;
+      object-fit: cover;
+      object-position: top;
+      @include max-screen(418px) {
+        object-position: right;
+      }
+    }
+  }
+  &__body {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-left: 10px;
+    color: #fff;
+    font-family: "Core Sans C", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    @include max-screen(991px) {
+      top: -40px;
+    }
+    @include max-screen(768px) {
+      top: -70px;
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    @include max-screen(1130px) {
+      font-size: 24px;
+      & > :not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    @include max-screen(768px) {
+      font-size: 16px;
+      & > :not(:last-child) {
+        margin-bottom: 13.2px;
+      }
+    }
+  }
+  &__tag {
+    line-height: 1.18;
+    letter-spacing: 0.1568px;
+    text-transform: capitalize;
+  }
+  &__title {
+    font-size: 78px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.3152px;
+    @include max-screen(1130px) {
+      font-size: 64px;
+    }
+    @include max-screen(991px) {
+      font-size: 48px;
+    }
+    @include max-screen(768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    line-height: 1.47;
+    letter-spacing: 0.3152px;
+  }
+  &__button {
+    padding: 16px 72px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 8px;
+
+    color: #3c4242;
+    text-align: center;
+    font-family: "Causten", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: all 0.3s ease 0s;
+    @include max-screen(768px) {
+      padding: 12px 52px;
+      font-size: 16px;
+    }
+    @include max-screen(575px) {
+      font-size: 16px;
+      padding: 10px 32px;
+    }
+    @include any-hover {
+      background-color: #8b33fd;
+      color: #fff;
+    }
+  }
+  &__pagination {
+    position: absolute;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    top: 30.452514%;
+    left: 0;
+    width: 100%;
+    @include max-screen(1300px) {
+      top: 30%;
+      padding: 0 16px;
+    }
+    @include max-screen(991px) {
+      top: 40%;
+      padding: 0 16px;
+    }
+    @include max-screen(768px) {
+      display: none;
+    }
+  }
+  &__carousel {
+    position: absolute;
+    bottom: 5%;
+    left: 46%;
+    @include max-screen(768px) {
+      display: none;
+    }
+  }
+}
+.pagination {
+  &__back,
+  &__forward {
+    transition: all 0.3s ease 0s;
+    @include any-hover {
+      transform: scale(1.06);
+    }
+    img {
+      width: 24px;
+      height: 44px;
+    }
+  }
+
+  &__forward {
+    img {
+      width: 24px;
+      height: 44px;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+.header {
+  background: #fff;
+  border-bottom: 1px solid #bebcbd;
+  &--sticky {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+  &__logo {
+    position: relative;
+    flex: 0 0 91px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+    min-height: 108px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include max-screen(1200px) {
+      gap: 30px;
+    }
+    @include max-screen(1060px) {
+      min-height: 74px;
+    }
+    @include max-screen(575px) {
+      column-gap: 15px;
+    }
+
+    .menu {
+      &__body {
+        @include max-screen(1060px) {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 75px;
+          left: -100%;
+          transition: all 0.3s ease 0s;
+          overflow: auto;
+          padding: 60px 35px 105px 15px;
+          background-color: #fff;
+          text-align: right;
+          z-index: 10;
+          .menu-open & {
+            left: 0;
+          }
+        }
+      }
+      &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 10px;
+        @include max-screen(1200px) {
+          gap: 25px;
+        }
+        @include max-screen(1060px) {
+          flex-direction: column;
+          row-gap: 25px;
+          align-items: flex-end;
+          li {
+            font-size: 26px;
+          }
+        }
+      }
+      &__item {
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+          &:hover {
+            color: #3c4242;
+          }
+        }
+        &--active {
+          color: #3c4242;
+          font-weight: 700;
+        }
+      }
+      @include max-screen(1060px) {
+        visibility: hidden;
+        .menu-open & {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__form {
+    flex: 0 1 267px;
+    position: relative;
+    @include max-screen(575px) {
+      position: fixed;
+      width: 100%;
+      height: 44px;
+      top: 80px;
+      right: 100%;
+      padding: 0px 20px;
+      transition: all 0.3s ease 0s;
+      flex-basis: 100%;
+      z-index: 10;
+
+      input {
+        padding-right: 20px;
+        padding-left: 40px;
+      }
+
+      button {
+        left: 30px;
+      }
+
+      .menu-open & {
+        right: 0;
+      }
+    }
+
+    input {
+      color: #3c4242;
+      height: 44px;
+      width: 100%;
+      padding: 0 20px 0 52px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    button {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      @include max-screen(575px) {
+        left: 45px;
+      }
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__item {
+    padding: 12px;
+    border-radius: 8px;
+    background: #f6f6f6;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #8b33fd81;
+      }
+    }
+    @include max-screen(575px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &__burger {
+    width: 44px;
+    height: 44px;
+
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+
+    display: none;
+    @include max-screen(1060px) {
+      display: block;
+      cursor: pointer;
+      &::before {
+        .menu-open & {
+          transform: rotate(45deg);
+          top: 50%;
+          margin-top: -1px;
+        }
+      }
+      &::after {
+        .menu-open & {
+          transform: rotate(-45deg);
+          bottom: 50%;
+          margin-bottom: -1px;
+        }
+      }
+      span {
+        .menu-open & {
+          display: none;
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      margin-bottom: -1px;
+      width: 60%;
+      height: 2px;
+      left: 9px;
+      background-color: #807d7e;
+      transition: all 0.2s;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      left: 9px;
+      background-color: #807d7e;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: 12px;
+    }
+    &::after {
+      bottom: 10px;
+    }
+    @include max-screen(575px) {
+      width: 36px;
+      height: 36px;
+      &::before,
+      &::after,
+      span {
+        left: 7px;
+      }
+      &::before {
+        top: 10px;
+      }
+      &::after {
+        bottom: 8px;
+      }
+    }
+  }
+}

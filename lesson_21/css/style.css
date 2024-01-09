@@ -1889,6 +1889,17 @@ textarea {
   }
 }
 
+.list__item a {
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  transition: all 0.3s ease 0s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .list__item a:hover {
+    text-decoration: underline;
+  }
+}
+
 .social__left-part {
   display: flex;
   align-self: flex-end;

@@ -75,6 +75,13 @@
 }
 .list {
   &__item {
+    a {
+      text-decoration: underline transparent;
+      transition: all 0.3s ease 0s;
+      @include any-hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 .social {

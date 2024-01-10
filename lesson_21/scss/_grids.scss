@@ -1,6 +1,6 @@
 .title {
-  color: #3c4242;
-  font-family: "Core Sans C", sans-serif;
+  color:$titleColor;
+  font-family: $secondaryFont;
   font-size: 34px;
   font-weight: 600;
   line-height: 0.98;
@@ -37,8 +37,7 @@
 }
 
 .page {
-  &__categories-men,
-  &__categories-women {
+  &__categories-products {
     margin-bottom: 100px;
     @include max-screen(1150px) {
       margin-bottom: 50px;
@@ -46,16 +45,15 @@
     @include max-screen(991.98px) {
       margin-bottom: 35px;
     }
-    .women-categories__title,
-    .men-categories__title {
-      margin-bottom: 70px;
-      @include max-screen(991.98px) {
-        margin-bottom: 35px;
-      }
-      @include max-screen(768px) {
-        margin-bottom: 20px;
-      }
-    }
+  }
+}
+.products-categories__title {
+  margin-bottom: 70px;
+  @include max-screen(991.98px) {
+    margin-bottom: 35px;
+  }
+  @include max-screen(768px) {
+    margin-bottom: 20px;
   }
 }
 
@@ -81,14 +79,12 @@
 }
 .card-item {
   &__link {
-    @media (any-hover: hover) {
-      &:hover {
-        .card-item__arr {
-          animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        }
-        .card-item__image img {
-          transform: scale(1.04);
-        }
+    @include any-hover {
+      .card-item__arr {
+        animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+      .card-item__image img {
+        transform: scale(1.04);
       }
     }
   }

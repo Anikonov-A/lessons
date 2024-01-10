@@ -359,10 +359,6 @@ textarea {
   width: 24px;
   height: 44px;
 }
-.pagination__forward img {
-  width: 24px;
-  height: 44px;
-}
 
 .page__offers {
   margin-bottom: 100px;
@@ -772,6 +768,16 @@ textarea {
 .fashion .part-left__text:not(:last-child) {
   margin-bottom: 50px;
 }
+@media screen and (max-width: 960px) {
+  .fashion .part-left__text:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fashion .part-left__text:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
 @media screen and (max-width: 1070px) {
   .fashion .part-left__text {
     font-size: 18px;
@@ -780,14 +786,6 @@ textarea {
 @media screen and (max-width: 960px) {
   .fashion .part-left__text {
     font-size: 16px;
-  }
-  .fashion .part-left__text:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .fashion .part-left__text:not(:last-child) {
-    margin-bottom: 15px;
   }
 }
 .fashion .part-left__button {
@@ -801,7 +799,7 @@ textarea {
   line-height: 1.2;
   transition: all 0.3s ease 0s;
 }
-@media (any-hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .fashion .part-left__button:hover {
     background-color: rgba(139, 51, 253, 0.5058823529);
     color: #fff;
@@ -1198,10 +1196,6 @@ textarea {
     flex-basis: 100%;
     z-index: 10;
   }
-  .header__form input {
-    padding-right: 20px;
-    padding-left: 40px;
-  }
   .header__form button {
     left: 30px;
   }
@@ -1218,6 +1212,12 @@ textarea {
   background: #f6f6f6;
   font-size: 16px;
   font-weight: 400;
+}
+@media screen and (max-width: 575px) {
+  .header__form input {
+    padding-right: 20px;
+    padding-left: 40px;
+  }
 }
 .header__form button {
   position: absolute;
@@ -1369,35 +1369,30 @@ textarea {
   }
 }
 
-.page__categories-men, .page__categories-women {
+.page__categories-products {
   margin-bottom: 100px;
 }
 @media screen and (max-width: 1150px) {
-  .page__categories-men, .page__categories-women {
+  .page__categories-products {
     margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 991.98px) {
-  .page__categories-men, .page__categories-women {
+  .page__categories-products {
     margin-bottom: 35px;
   }
 }
-.page__categories-men .women-categories__title,
-.page__categories-men .men-categories__title, .page__categories-women .women-categories__title,
-.page__categories-women .men-categories__title {
+
+.products-categories__title {
   margin-bottom: 70px;
 }
 @media screen and (max-width: 991.98px) {
-  .page__categories-men .women-categories__title,
-  .page__categories-men .men-categories__title, .page__categories-women .women-categories__title,
-  .page__categories-women .men-categories__title {
+  .products-categories__title {
     margin-bottom: 35px;
   }
 }
 @media screen and (max-width: 768px) {
-  .page__categories-men .women-categories__title,
-  .page__categories-men .men-categories__title, .page__categories-women .women-categories__title,
-  .page__categories-women .men-categories__title {
+  .products-categories__title {
     margin-bottom: 20px;
   }
 }
@@ -1433,7 +1428,7 @@ textarea {
   }
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .card-item__link:hover .card-item__arr {
     animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
@@ -2004,6 +1999,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
+
 .part-bottom__block {
   text-align: center;
   padding-top: 37px;

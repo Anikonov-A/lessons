@@ -58,8 +58,8 @@
     }
 
     &__title {
-      color: #fff;
-      font-family: "Core Sans C", sans-serif;
+      color: $mainColor;
+      font-family: $secondaryFont;
       font-size: 34px;
       font-weight: 800;
       line-height: 1.47;
@@ -81,45 +81,41 @@
     }
 
     &__text {
-      color: #fff;
+      color: $mainColor;
       font-size: 20px;
       font-weight: 300;
       line-height: 1.2;
       letter-spacing: 1px;
       &:not(:last-child) {
         margin-bottom: 50px;
+        @include max-screen(960px) {
+          margin-bottom: 30px;
+        }
+        @include max-screen(480px) {
+          margin-bottom: 15px;
+        }
       }
       @include max-screen(1070px) {
         font-size: 18px;
       }
       @include max-screen(960px) {
         font-size: 16px;
-        &:not(:last-child) {
-          margin-bottom: 30px;
-        }
-      }
-      @include max-screen(480px) {
-        &:not(:last-child) {
-          margin-bottom: 15px;
-        }
       }
     }
     &__button {
       border-radius: 8px;
-      background: #fff;
+      background: $mainColor;
       padding: 12px 44px;
 
-      color: #3c4242;
+      color: $titleColor;
       text-align: center;
       font-size: 18px;
       font-weight: 600;
       line-height: 1.2;
       transition: all 0.3s ease 0s;
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: #8b33fd81;
-          color: #fff;
-        }
+      @include any-hover {
+        background-color: #8b33fd81;
+        color: $mainWhite;
       }
 
       @include max-screen(1070px) {

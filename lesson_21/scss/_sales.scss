@@ -50,7 +50,7 @@
     row-gap: 36px;
   }
   &--white &__body {
-    color: #fff;
+    color: $mainWhite;
   }
   &--big &__link {
     row-gap: 44px;
@@ -134,7 +134,7 @@
 
   &__body {
     position: relative;
-    color: #3c4242;
+    color: $titleColor;
 
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@
   }
 
   &__title {
-    font-family: "Core Sans C", sans-serif;
+    font-family: $secondaryFont;
     font-size: 28px;
     font-weight: 700;
     line-height: 1.37;
@@ -181,7 +181,7 @@
     }
     span {
       text-transform: uppercase;
-      font-family: "Causten", sans-serif;
+      font-family: $mainFont;
       font-size: 12px;
       border-radius: 4px;
       font-weight: 500;
@@ -192,12 +192,12 @@
   }
 
   &__block {
-    color: #fff;
+    color: $mainWhite;
     font-size: 12px;
     font-weight: 700;
     line-height: 1.2;
     border-radius: 4px;
-    background: #3c4242;
+    background: $titleColor;
     padding: 8px 16px;
   }
 }

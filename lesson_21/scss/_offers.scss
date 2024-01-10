@@ -16,9 +16,9 @@
     column-gap: 30px;
     row-gap: 20px;
 
-    font-family: "Core Sans C", sans-serif;
+    font-family: $secondaryFont;
     font-size: 18px;
-    color: #fff;
+    color: $mainWhite;
     @include max-screen(950px) {
       gap: 15px;
       grid-template-columns: 1fr;
@@ -67,7 +67,7 @@
     row-gap: 30px;
     height: 100%;
     a {
-      color: #fff;
+      color: $mainWhite;
       font-size: 20px;
       font-weight: 800;
       line-height: 1.5;
@@ -79,12 +79,10 @@
     }
   }
 
-  // .offers__content
-
   &__content {
     flex-grow: 1;
     h6 {
-      font-family: "Montserrat", sans-serif;
+      font-family: $monserat;
       font-weight: 800;
       line-height: 1.67;
       margin-bottom: 24px;

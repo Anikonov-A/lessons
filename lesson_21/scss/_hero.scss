@@ -64,8 +64,8 @@
     left: 0;
     z-index: 1;
     padding-left: 10px;
-    color: #fff;
-    font-family: "Core Sans C", sans-serif;
+    color: $mainWhite;
+    font-family: $secondaryFont;
     font-weight: 500;
     font-size: 32px;
     @include max-screen(991px) {
@@ -120,12 +120,12 @@
   &__button {
     padding: 16px 72px;
     color: #000;
-    background-color: #fff;
+    background-color: $mainWhite;
     border-radius: 8px;
 
-    color: #3c4242;
+    color: $titleColor;
     text-align: center;
-    font-family: "Causten", sans-serif;
+    font-family: $mainFont;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
@@ -140,7 +140,7 @@
     }
     @include any-hover {
       background-color: #8b33fd;
-      color: #fff;
+      color: $mainWhite;
     }
   }
   &__pagination {
@@ -179,13 +179,6 @@
     @include any-hover {
       transform: scale(1.06);
     }
-    img {
-      width: 24px;
-      height: 44px;
-    }
-  }
-
-  &__forward {
     img {
       width: 24px;
       height: 44px;

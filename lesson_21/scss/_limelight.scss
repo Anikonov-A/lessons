@@ -36,7 +36,7 @@
   position: relative;
   @include any-hover {
     h5 {
-      text-decoration: underline #3c4242;
+      text-decoration: underline $titleColor;
     }
   }
   &__img {
@@ -75,7 +75,7 @@
   }
   &__info-limelight {
     h5 {
-      color: #3c4242;
+      color: $titleColor;
       font-size: 16px;
       font-weight: 600;
       line-height: 1.2;
@@ -91,7 +91,7 @@
       transition: all 0.3s ease 0s;
     }
     div {
-      color: #807d7e;
+      color: $mainColor;
       font-size: 14px;
       font-weight: 500;
       line-height: 1.2;
@@ -102,8 +102,8 @@
   &__price {
     padding: 10px 16px;
     border-radius: 8px;
-    background: #f6f6f6;
-    color: #3c4242;
+    background: $primaryGray;
+    color: $titleColor;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
@@ -112,7 +112,7 @@
 
     @include any-hover {
       background-color: #8b33fd;
-      color: #fff;
+      color: $mainWhite;
     }
   }
 }

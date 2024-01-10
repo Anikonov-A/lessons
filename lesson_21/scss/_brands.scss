@@ -8,7 +8,7 @@
 }
 .brands {
   &__block {
-    background: #3c4242;
+    background: $titleColor;
     border-radius: 12px;
     text-align: center;
 
@@ -20,8 +20,8 @@
     }
   }
   &__title {
-    color: #fff;
-    font-family: "Core Sans C", sans-serif;
+    color: $mainColor;
+    font-family: $secondaryFont;
     font-size: 50px;
     font-weight: 800;
     line-height: 1.2;
@@ -31,7 +31,7 @@
     }
   }
   &__subtitle {
-    color: #fff;
+    color: $mainColor;
     font-size: 22px;
     font-weight: 400;
     line-height: 1.2;
@@ -62,7 +62,7 @@
 
   &__card {
     padding: 10px 12px;
-    background-color: #fff;
+    background-color: $mainColor;
     border-radius: 12px;
     flex: 0 1 177px;
     min-height: 85px;

@@ -1,6 +1,6 @@
 .footer {
-  background: #3c4242;
-  color: #fff;
+  background: $titleColor;
+  color: $mainWhite;
   &__body {
     padding: 59px 0;
     @include max-screen(575px) {
@@ -54,8 +54,6 @@
       margin-bottom: 5px;
     }
   }
-
-  // .part-top__social
 
   &__social {
     display: flex;
@@ -115,7 +113,7 @@
 }
 .part-right {
   &__subtitle {
-    color: #f6f6f6;
+    color: $primaryGray;
     font-size: 28.5px;
     font-weight: 700;
     line-height: 2.16;
@@ -148,8 +146,8 @@
 }
 .part-middle {
   padding: 30px 85px;
-  border-bottom: 1px solid rgba(190, 188, 189, 0.4);
-  border-top: 1px solid rgba(190, 188, 189, 0.4);
+  border-bottom: $footerBorder;
+  border-top: $footerBorder;
   @include max-screen(991px) {
     padding: 15px 30px;
   }
@@ -157,8 +155,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #f6f6f6;
-    font-family: "Causten", sans-serif;
+    color: $primaryGray;
+    font-family: $mainColor;
     font-size: 28.5px;
     font-weight: 700;
     line-height: 2;
@@ -174,11 +172,6 @@
       }
     }
   }
-
-  // .part-middle__title
-
-  &__title {
-  }
 }
 .part-bottom {
   &__block {
@@ -188,7 +181,7 @@
       padding-top: 15px;
     }
     p {
-      color: #fff;
+      color: $mainWhite;
       font-size: 18px;
       font-weight: 700;
       line-height: 2;

@@ -3,6 +3,7 @@
 @import "_reset.scss";
 
 @import "_mixin.scss";
+@import "_variables.scss";
 
 @import "_hero.scss";
 @import "_offers.scss";
@@ -17,8 +18,8 @@
 @import "_footer.scss";
 
 body {
-  color: #807d7e;
-  font-family: "Causten", sans-serif;
+  color: $mainColor;
+  font-family: $mainFont;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.2;

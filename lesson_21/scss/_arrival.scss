@@ -76,8 +76,8 @@
 }
 
 .subtitle {
-  color: #3c4242;
-  font-family: "Core Sans C", sans-serif;
+  color: $titleColor;
+  font-family: $secondaryFont;
   font-size: 34px;
   font-weight: 600;
   line-height: 0.98;
@@ -121,11 +121,11 @@
         transform: scale(1.04);
       }
       &:hover h5 {
-        text-decoration: underline #3c4242;
+        text-decoration: underline $titleColor;
       }
     }
     h5 {
-      color: #3c4242;
+      color: #$titleColor;
       font-size: 20px;
       font-weight: 700;
       line-height: 1.2;

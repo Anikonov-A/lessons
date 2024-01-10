@@ -1,5 +1,5 @@
 .header {
-  background: #fff;
+  background: $mainWhite;
   border-bottom: 1px solid #bebcbd;
   &--sticky {
     position: sticky;
@@ -41,7 +41,7 @@
           transition: all 0.3s ease 0s;
           overflow: auto;
           padding: 60px 35px 105px 15px;
-          background-color: #fff;
+          background-color: $mainWhite;
           text-align: right;
           z-index: 10;
           .menu-open & {
@@ -71,11 +71,11 @@
         transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
           &:hover {
-            color: #3c4242;
+            color: $titleColor;
           }
         }
         &--active {
-          color: #3c4242;
+          color: $titleColor;
           font-weight: 700;
         }
       }
@@ -101,11 +101,6 @@
       flex-basis: 100%;
       z-index: 10;
 
-      input {
-        padding-right: 20px;
-        padding-left: 40px;
-      }
-
       button {
         left: 30px;
       }
@@ -116,14 +111,18 @@
     }
 
     input {
-      color: #3c4242;
+      color: $titleColor;
       height: 44px;
       width: 100%;
       padding: 0 20px 0 52px;
       border-radius: 8px;
-      background: #f6f6f6;
+      background: $primaryGray;
       font-size: 16px;
       font-weight: 400;
+      @include max-screen(575px) {
+        padding-right: 20px;
+        padding-left: 40px;
+      }
     }
     button {
       position: absolute;
@@ -142,7 +141,7 @@
   &__item {
     padding: 12px;
     border-radius: 8px;
-    background: #f6f6f6;
+    background: $primaryGray;
     width: 44px;
     height: 44px;
     display: flex;
@@ -163,7 +162,7 @@
     width: 44px;
     height: 44px;
 
-    background-color: #f6f6f6;
+    background-color: $primaryGray;
     border-radius: 8px;
     transition: all 0.3s ease 0s;
     position: relative;
@@ -199,7 +198,7 @@
       width: 60%;
       height: 2px;
       left: 9px;
-      background-color: #807d7e;
+      background-color: $mainColor;
       transition: all 0.2s;
     }
     &::before,
@@ -209,7 +208,7 @@
       width: 60%;
       height: 2px;
       left: 9px;
-      background-color: #807d7e;
+      background-color: $mainColor;
       transition: all 0.2s;
     }
     &::before {

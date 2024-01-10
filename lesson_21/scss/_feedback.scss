@@ -1,11 +1,4 @@
-.page {
-  &__feedback {
-  }
-}
 .feedback {
-  &__container {
-  }
-
   &__title {
     margin-bottom: 70px;
     @include max-screen(768px) {
@@ -44,9 +37,6 @@
     justify-content: space-between;
     margin-bottom: 20px;
   }
-
-  // .wrapper-article__user
-
   &__user {
     flex: 0 0 59px;
     img {
@@ -56,13 +46,9 @@
       object-fit: cover;
     }
   }
-
-  &__rating {
-  }
-
   &__title {
-    color: #3c4242;
-    font-family: "Core Sans C";
+    color: $titleColor;
+    font-family: $secondaryFont;
     font-size: 22px;
     font-weight: 500;
     line-height: 1.2;
@@ -71,7 +57,7 @@
   }
   &__text {
     overflow: hidden;
-    color: #807d7e;
+    color: $mainColor;
     text-overflow: ellipsis;
     font-size: 14px;
     font-weight: 400;

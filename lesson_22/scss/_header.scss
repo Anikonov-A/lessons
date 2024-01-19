@@ -1,0 +1,322 @@
+.header {
+  position: relative;
+  &__top-part {
+    background-color: $primaryDark;
+    padding: toRem(22) 0;
+  }
+  &__main-part {
+    background-color: $primaryWhite;
+    padding: toRem(46.5) 0;
+  }
+}
+.part-top {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(10);
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: toRem(42);
+  }
+  &__location,
+  &__email {
+    color: $primaryWhite;
+    font-family: $font-inter;
+    font-size: toRem(14);
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: toEm(9, 14);
+  }
+  &__social {
+    @extend .part-top__info;
+    gap: toRem(50);
+  }
+}
+.social {
+  &__time {
+    @extend .part-top__location;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: toRem(16);
+    a {
+      max-width: toRem(18);
+      max-height: toRem(18);
+
+      svg {
+        max-width: 100%;
+        height: 100%;
+        path {
+          transition: all 0.3s ease 0s;
+        }
+      }
+      @include any-hover {
+        svg path {
+          fill: $primaryGreen;
+        }
+      }
+    }
+  }
+}
+.part-main {
+  &__container {
+    @extend .part-top__container;
+    gap: toRem(10);
+  }
+
+  &__logo {
+    flex: 0 0 toRem(200);
+  }
+
+  &__navigation {
+    display: flex;
+    gap: toRem(40);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: toRem(40);
+    row-gap: toRem(10);
+    color: $primaryDark;
+  }
+  &__item {
+    cursor: pointer;
+    .part-main__link::after {
+      content: "";
+      width: 0;
+      display: block;
+      height: toRem(2);
+      bottom: 0;
+      left: 50%;
+      position: relative;
+      background-color: $primaryPurple;
+      transition: background-color 0.3s ease 0s, width 0.3s ease 0s,
+        left 0.3s ease 0s;
+    }
+    @include any-hover {
+      color: $primaryPurple;
+      .part-main__link::after {
+        background-color: $primaryPurple;
+        width: 100%;
+        left: 0;
+      }
+    }
+    &--dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: toRem(7);
+      img {
+        transition: transform 0.3s ease 0s;
+      }
+      @include any-hover {
+        img {
+          transform: rotate(180deg);
+        }
+        .submenu {
+          opacity: 1;
+          transform: translate(0px, 0px);
+          visibility: visible;
+          display: block;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+  &__button {
+    padding: toRem(22) toRem(35);
+    background-color: $primaryPurple;
+    flex-shrink: 0;
+    color: $primaryWhite;
+    font-family: $font-cabin;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+    @include any-hover {
+      background-color: $primaryGreen;
+    }
+  }
+  &__burger {
+    width: 44px;
+    height: 44px;
+
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+
+    display: none;
+    @include max-screen($t-lg) {
+      display: block;
+      cursor: pointer;
+      &::before {
+        .menu-open & {
+          transform: rotate(45deg);
+          top: 50%;
+          margin-top: -1px;
+        }
+      }
+      &::after {
+        .menu-open & {
+          transform: rotate(-45deg);
+          bottom: 50%;
+          margin-bottom: -1px;
+        }
+      }
+      span {
+        .menu-open & {
+          display: none;
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      margin-bottom: -1px;
+      width: 60%;
+      height: 2px;
+      left: 9px;
+      background-color: $primaryPurple;
+      transition: all 0.2s;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      left: 9px;
+      background-color: $primaryPurple;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: 12px;
+    }
+    &::after {
+      bottom: 10px;
+    }
+    @include max-screen(575px) {
+      width: 36px;
+      height: 36px;
+      &::before,
+      &::after,
+      span {
+        left: 7px;
+      }
+      &::before {
+        top: 10px;
+      }
+      &::after {
+        bottom: 8px;
+      }
+    }
+  }
+}
+
+.submenu {
+  transition: all 0.3s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: toRem(5);
+
+  transform: translate(0px, 10%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: $primaryWhite;
+
+  &__list {
+    width: toRem(150);
+    border-radius: toRem(15);
+    padding-top: toRem(10);
+    border: 1px solid $primaryPurple;
+    li {
+      padding: toRem(8) toRem(8);
+    }
+  }
+  &__link {
+    color: $primaryPurple;
+    transition: color 0.3s ease 0s;
+    &::after {
+      content: "";
+      width: 0;
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: relative;
+      margin-top: 2px;
+      background-color: $primaryPurple;
+      transition: all 0.3s ease 0s;
+    }
+    @include any-hover {
+      &::after {
+        background-color: $primaryPurple;
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
+// .icon-menu {
+//   width: toRem(30);
+//   height: toRem(18);
+//   background-color: $primaryPurple;
+//   flex: 0 0 toRem(30);
+
+//   display: none;
+//   @include max-screen(1024px) {
+//     display: block;
+//     position: relative;
+//     z-index: 100;
+
+//     &::before,
+//     &::after,
+//     & span {
+//       content: "";
+//       height: toRem(2);
+//       width: 100%;
+//       position: absolute;
+//       top: 100px;
+//       left: 0;
+//       transition: all 0.3s;
+//     }
+
+//     &::before {
+//       top: 0;
+
+//       .menu-open & {
+//         transform: rotate(-45deg);
+//         top: 50%;
+//         margin-top: toRem(-1);
+//       }
+//     }
+
+//     &::after {
+//       bottom: 0;
+
+//       .menu-open & {
+//         transform: rotate(45deg);
+//         bottom: 50%;
+//         margin-bottom: toRem(-1);
+//       }
+//     }
+
+//     & span {
+//       top: 50%;
+//       margin-top: toRem(-1);
+
+//       .menu-open & {
+//         transform: scale(0);
+//       }
+//     }
+//   }
+// }

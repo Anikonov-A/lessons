@@ -1,0 +1,42 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+@import "_reset.scss";
+@import "_functions.scss";
+
+@import "_vars.scss";
+@import "_mixin.scss";
+
+@import "_header.scss";
+
+body {
+  color: $primaryGray;
+  font-family: $font-inter;
+  font-size: 18px;
+  line-height: 1.46;
+}
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex-grow: 1;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.menu-open body {
+  overflow: hidden;
+}
+
+// .page > *:first-child {
+//   padding-top: 130px;
+//   @media (max-width: 960px) {
+//     padding-top: 100px;
+//   }
+// }

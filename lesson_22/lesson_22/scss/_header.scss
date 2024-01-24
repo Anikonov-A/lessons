@@ -1,0 +1,381 @@
+.header {
+  position: relative;
+  &__top-part {
+    background-color: $primaryDark;
+    padding: toRem(22) 0;
+    position: relative;
+    @include max-screen($t-lg) {
+      opacity: 0;
+      padding: 0;
+      transition: all 0.3s ease 0s;
+      position: fixed;
+      overflow: auto;
+      opacity: 1;
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      z-index: 10;
+      border-bottom: 2px solid #ffffff;
+      .menu-open & {
+        opacity: 1;
+        right: 0;
+      }
+    }
+  }
+  &__main-part {
+    background-color: $primaryWhite;
+    padding: toRem(46.5) 0;
+    @include max-screen($t-lg) {
+      padding: toRem(20) 0;
+    }
+  }
+}
+.part-top {
+  &__container {
+    &--flex {
+      gap: toRem(10);
+      align-items: center;
+      @include max-screen($t-lg) {
+        justify-content: center;
+      }
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: toRem(42);
+    @include max-screen($t) {
+      gap: toRem(10);
+      flex-direction: column;
+    }
+  }
+  &__location,
+  &__email {
+    color: $primaryWhite;
+    font-family: $font-inter;
+    font-size: toRem(14);
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: toEm(9, 14);
+  }
+  &__social {
+    @extend .part-top__info;
+    gap: toRem(50);
+    @include max-screen($t) {
+      gap: toRem(10);
+      flex-direction: column;
+    }
+  }
+}
+.social {
+  &__time {
+    @extend .part-top__location;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: toRem(16);
+    a {
+      max-width: toRem(18);
+      max-height: toRem(18);
+
+      svg {
+        max-width: 100%;
+        height: 100%;
+        path {
+          transition: all 0.3s ease 0s;
+        }
+      }
+      @include any-hover {
+        svg path {
+          fill: $primaryGreen;
+        }
+      }
+    }
+  }
+}
+.part-main {
+  &__container {
+    @extend .part-top__container;
+    gap: toRem(10);
+  }
+
+  &__logo {
+    flex: 0 0 toRem(200);
+  }
+
+  &__navigation {
+    display: flex;
+    gap: toRem(40);
+    @include max-screen($desc-sm) {
+      gap: toRem(20);
+    }
+    @media (max-width: $t-lg) {
+      position: fixed;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      top: 84px;
+      left: -100%;
+      transition: all 0.3s ease 0s;
+      overflow: auto;
+      padding: toRem(30) toRem(20) toRem(200) toRem(15);
+      background-color: $primaryGray;
+      text-align: right;
+      z-index: 9;
+      @include max-screen($t-lg) {
+      }
+      .menu-open & {
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: toRem(40);
+    row-gap: toRem(10);
+    color: $primaryDark;
+    @include max-screen($desc-sm) {
+      column-gap: toRem(20);
+    }
+    @include max-screen($t-lg) {
+      flex-direction: column;
+      align-items: stretch;
+      color: $primaryGreen;
+    }
+  }
+  &__item {
+    cursor: pointer;
+
+    .part-main__link::after {
+      content: "";
+      width: 0;
+      display: block;
+      height: toRem(2);
+      bottom: 0;
+      left: 50%;
+      position: relative;
+      background-color: $primaryPurple;
+      transition: background-color 0.3s ease 0s, width 0.3s ease 0s,
+        left 0.3s ease 0s;
+    }
+    @include any-hover {
+      color: $primaryPurple;
+      .part-main__link::after {
+        background-color: $primaryPurple;
+        width: 100%;
+        left: 0;
+      }
+    }
+    &--dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: toRem(7);
+      @include max-screen($t-lg) {
+        flex-direction: column;
+        text-align: right;
+        a {
+          align-self: flex-end;
+        }
+        .submenu {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
+      img {
+        transition: transform 0.3s ease 0s;
+        @include max-screen($t-lg) {
+          display: none;
+        }
+      }
+
+      @include any-hover {
+        img {
+          transform: rotate(180deg);
+        }
+        .submenu {
+          opacity: 1;
+          transform: translate(0px, 0px);
+          visibility: visible;
+          display: block;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+  &__button {
+    padding: toRem(22) toRem(35);
+    background-color: $primaryPurple;
+    flex-shrink: 0;
+    color: $primaryWhite;
+    font-family: $font-cabin;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+    @include any-hover {
+      background-color: $primaryGreen;
+    }
+    @media (max-width: $t-lg) {
+      align-self: flex-end;
+    }
+  }
+  &__burger {
+    width: 44px;
+    height: 44px;
+
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+
+    display: none;
+    @include max-screen($t-lg) {
+      display: block;
+      cursor: pointer;
+      &::before {
+        .menu-open & {
+          transform: rotate(45deg);
+          top: 50%;
+          margin-top: -1px;
+        }
+      }
+      &::after {
+        .menu-open & {
+          transform: rotate(-45deg);
+          bottom: 50%;
+          margin-bottom: -1px;
+        }
+      }
+      span {
+        .menu-open & {
+          display: none;
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      margin-bottom: -1px;
+      width: 60%;
+      height: 2px;
+      left: 9px;
+      background-color: $primaryPurple;
+      transition: all 0.2s;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      left: 9px;
+      background-color: $primaryPurple;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: 12px;
+    }
+    &::after {
+      bottom: 10px;
+    }
+    @include max-screen(575px) {
+      width: 36px;
+      height: 36px;
+      &::before,
+      &::after,
+      span {
+        left: 7px;
+      }
+      &::before {
+        top: 10px;
+      }
+      &::after {
+        bottom: 8px;
+      }
+    }
+  }
+}
+
+.submenu {
+  transition: all 0.3s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: toRem(5);
+
+  transform: translate(0px, 10%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: $primaryWhite;
+
+  @include max-screen($t-lg) {
+    position: relative;
+    top: 0;
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    width: 100%;
+    background-color: $primaryPurple;
+
+    li {
+      width: 100%;
+      a {
+        color: $primaryGreen;
+      }
+    }
+  }
+
+  &__list {
+    width: toRem(150);
+    border-radius: toRem(15);
+    padding-top: toRem(10);
+    border: 1px solid $primaryPurple;
+    li {
+      padding: toRem(8) toRem(8);
+    }
+  }
+  &__link {
+    color: $primaryPurple;
+    transition: color 0.3s ease 0s;
+    &::after {
+      content: "";
+      width: 0;
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: relative;
+      margin-top: 2px;
+      background-color: $primaryPurple;
+      transition: all 0.3s ease 0s;
+    }
+    @include any-hover {
+      &::after {
+        background-color: $primaryPurple;
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
+.sub-open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .submenu {
+  }
+}
+.sub-open .part-main__item--dropdown img {
+  transform: rotate(180deg);
+}
